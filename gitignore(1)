@@ -1,0 +1,116 @@
+# ─────────────────────────────────────────────────────────────
+# .gitignore — Repositorio Web Semántica (UCLV)
+# Optimizado para: Python, RDF/OWL, Protégé, Jupyter, IDEs
+# ─────────────────────────────────────────────────────────────
+
+# ─── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ─── Virtualenv ─────────────────────────────────────────────
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.python-version
+
+# ─── Jupyter Notebook ──────────────────────────────────────
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints
+# Mantener los .ipynb pero no los checkpoints
+
+# ─── RDF / OWL / SPARQL artifacts ───────────────────────────
+*.lock
+*.cache
+# Mantener .ttl .rdf .owl .rq .nt - son contenido del curso
+
+# ─── Protégé ────────────────────────────────────────────────
+# Protégé genera estos archivos temporales
+*.ppinx
+.catalog
+backups/
+*~protege*
+# No ignorar .pinto ni .pont (formatos legacy de Protégé-Frames, son contenido)
+# Puedes descomentar si no los usas:
+# *.pinto
+# *.pont
+
+# ─── Apache Jena / Fuseki ───────────────────────────────────
+fuseki/
+run/
+TDB/
+*.tdb
+# No ignorar .rq ni .ttl - son contenido del curso
+
+# ─── Editores e IDEs ────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# ─── OS metadata ────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ─── PDFs generados automáticamente ────────────────────────
+# Las diapositivas fuente sí se versionan; los PDFs generados no
+teoria/*.aux
+teoria/*.log
+teoria/*.out
+teoria/*.toc
+
+# ─── Estudiantes: entregas locales ───────────────────────────
+# Las entregas formales van por GitHub Classroom, no en este repo
+entregas/
+mi-entrega/
+soluciones-propias/
+
+# ─── Secretos y credenciales ────────────────────────────────
+.env
+.env.local
+*.pem
+*.key
+credentials.json
+token.json
+.github_token
+
+# ─── Logs ───────────────────────────────────────────────────
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
