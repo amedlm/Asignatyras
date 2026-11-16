@@ -1,6 +1,6 @@
 # ─────────────────────────────────────────────────────────────
-# .gitignore — Repositorio Análisis Documental I (UCLV)
-# Optimizado para: MARC 21, Dublin Core, Python, IDEs
+# .gitignore — Repositorio Web Semántica (UCLV)
+# Optimizado para: Python, RDF/OWL, Protégé, Jupyter, IDEs
 # ─────────────────────────────────────────────────────────────
 
 # ─── Python ──────────────────────────────────────────────────
@@ -39,19 +39,30 @@ venv.bak/
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 *.ipynb_checkpoints
+# Mantener los .ipynb pero no los checkpoints
 
-# ─── MARC 21 / MARCXML ──────────────────────────────────────
-# Los registros .mrc y .xml son contenido del curso: NO ignorar.
-# Pero sí ignorar archivos temporales de pymarc:
-*.bak.mrc
-marc_temp/
+# ─── RDF / OWL / SPARQL artifacts ───────────────────────────
+*.lock
+*.cache
+# Mantener .ttl .rdf .owl .rq .nt - son contenido del curso
 
-# ─── ABCD / ISIS ────────────────────────────────────────────
-abcd/data/*.msn
-abcd/data/*.ifp
-abcd/locks/
-abcd/log/
-# Mantener .iso (ISO-2709) y .mst - son contenido del curso
+# ─── Protégé ────────────────────────────────────────────────
+# Protégé genera estos archivos temporales
+*.ppinx
+.catalog
+backups/
+*~protege*
+# No ignorar .pinto ni .pont (formatos legacy de Protégé-Frames, son contenido)
+# Puedes descomentar si no los usas:
+# *.pinto
+# *.pont
+
+# ─── Apache Jena / Fuseki ───────────────────────────────────
+fuseki/
+run/
+TDB/
+*.tdb
+# No ignorar .rq ni .ttl - son contenido del curso
 
 # ─── Editores e IDEs ────────────────────────────────────────
 .vscode/
@@ -76,12 +87,14 @@ Thumbs.db
 desktop.ini
 
 # ─── PDFs generados automáticamente ────────────────────────
+# Las diapositivas fuente sí se versionan; los PDFs generados no
 teoria/*.aux
 teoria/*.log
 teoria/*.out
 teoria/*.toc
 
 # ─── Estudiantes: entregas locales ───────────────────────────
+# Las entregas formales van por GitHub Classroom, no en este repo
 entregas/
 mi-entrega/
 soluciones-propias/
@@ -93,6 +106,7 @@ soluciones-propias/
 *.key
 credentials.json
 token.json
+.github_token
 
 # ─── Logs ───────────────────────────────────────────────────
 *.log

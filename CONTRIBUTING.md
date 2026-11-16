@@ -1,4 +1,4 @@
-# Guía de contribución — Análisis Documental I (UCLV)
+# Guía de contribución — Web Semántica (UCLV)
 
 ¡Gracias por tu interés en contribuir a este repositorio! Esta guía describe
 cómo estudiantes, profesores y colaboradores externos pueden proponer mejoras,
@@ -13,11 +13,10 @@ La participación en este repositorio implica aceptar y respetar nuestro
 
 - **Estudiantes**: leen el material, entregan prácticas vía GitHub Classroom y
   pueden reportar errores o proponer mejoras.
-- **Maintainers**: profesores del equipo de Análisis Documental I de la UCLV.
-  Revisan Pull Requests, gestionan Issues y mantienen la coherencia del
-  repositorio.
-- **Collaborators externos**: profesores de otras instituciones que proponen
-  contribuciones vía PR.
+- **Maintainers**: profesores del Grupo de Web Semántica de la UCLV. Revisan
+  Pull Requests, gestionan Issues y mantienen la coherencia del repositorio.
+- **Collaborators externos**: profesores de otras instituciones (VLIR-UOS,
+  Universidad de Hasselt, Iberoamérica) que proponen contribuciones vía PR.
 
 ## Flujo de trabajo
 
@@ -26,19 +25,19 @@ La participación en este repositorio implica aceptar y respetar nuestro
 ```bash
 # 1. Haz fork desde la web de GitHub (botón Fork arriba a la derecha)
 # 2. Clona tu fork localmente
-git clone https://github.com/TU_USUARIO/analisis-documental.git
-cd analisis-documental
+git clone https://github.com/TU_USUARIO/web-semantica.git
+cd web-semantica
 
 # 3. Añade el repositorio upstream para sincronizar cambios
-git remote add upstream https://github.com/uclv-cinfo/analisis-documental.git
+git remote add upstream https://github.com/uclv-cinfo/web-semantica.git
 ```
 
 ### 2. Crea una rama descriptiva
 
 ```bash
-git checkout -b fix/u2-tipo-isbd
+git checkout -b fix/u3-typo-sparql
 # o
-git checkout -b feat/u4-nueva-practica-resumen
+git checkout -b feat/u5-nueva-practica-wikidata
 ```
 
 ### 3. Realiza los cambios y haz commit
@@ -47,25 +46,25 @@ Seguimos la especificación **Conventional Commits**:
 
 | Tipo      | Uso                                            |
 |-----------|------------------------------------------------|
-| `feat:`   | Nueva práctica, diapositiva o ejemplo         |
+| `feat:`   | Nueva práctica, diapositiva o dataset          |
 | `fix:`    | Corrección de error en material existente      |
 | `docs:`   | Cambio en documentación (README, apuntes)      |
 | `style:`  | Formato, sin cambio de contenido               |
 | `refactor:`| Reorganización de carpetas o archivos          |
-| `test:`   | Nuevos tests de validación MARC 21 / DC        |
+| `test:`   | Nuevos tests de consultas o validaciones      |
 
 Ejemplos:
 
 ```bash
-git commit -m "feat(u3): añade práctica de indización con tesauro"
-git commit -m "fix(u5): corrige ejemplo Dublin Core"
+git commit -m "feat(u3): añade práctica sobre ontologías OWL"
+git commit -m "fix(u5): corrige typo en consulta SPARQL"
 git commit -m "docs: actualiza cronograma del semestre"
 ```
 
 ### 4. Push y Pull Request
 
 ```bash
-git push origin fix/u2-tipo-isbd
+git push origin fix/u3-typo-sparql
 ```
 
 Abre el Pull Request desde GitHub. Se cargará automáticamente la plantilla
@@ -82,13 +81,11 @@ checklist de autoevaluación.
 ## Convenciones de estructura
 
 - Las prácticas van en `unidades/uN/practicas/` con nombre `practica-N.md`.
-- Los registros MARC 21 van en `unidades/uN/practicas/registros-ejemplo/`
-  con extensión `.mrc` (formato binario) o `.xml` (MARCXML).
-- Los metadatos Dublin Core van en `marcos-catalograficos/dublin-core/` con
-  extensión `.xml`.
-- Los tesauros SKOS van en `lenguajes-documentales/tesauros/` con extensión
-  `.ttl` o `.rdf`.
-- Las diapositivas se publican en `teoria/` tanto en PDF como en HTML.
+- Los datasets RDF van en `unidades/uN/datasets/` con extensión `.ttl`.
+- Las ontologías OWL van en `ontologias-ejemplo/` o en la unidad correspondiente.
+- Las consultas SPARQL van en `endpoints-sparql/` con extensión `.rq`.
+- Las diapositivas se publican en `teoria/` tanto en PDF como en HTML
+  (reveal.js).
 
 ## Reportar errores sin programar
 
