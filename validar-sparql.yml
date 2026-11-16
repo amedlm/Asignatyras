@@ -1,0 +1,97 @@
+# Validación de consultas SPARQL contra endpoint local Apache Jena Fuseki
+# Se ejecuta en cada push o PR que toque archivos *.rq o datasets *.ttl.
+# Forma parte del autograding de la práctica P3-SPARQL.
+name: Validar SPARQL
+
+on:
+  push:
+    paths:
+      - '**/*.rq'
+      - '**/*.ttl'
+      - 'endpoints-sparql/**'
+      - '.github/workflows/validar-sparql.yml'
+  pull_request:
+    paths:
+      - '**/*.rq'
+      - '**/*.ttl'
+  workflow_dispatch:
+
+jobs:
+  validar-sparql:
+    name: Ejecutar consultas SPARQL de prueba
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar rdflib y pysparql-client
+        run: pip install --no-cache-dir rdflib sparqlwrapper
+
+      - name: Descargar y descomprimir Apache Jena Fuseki
+        run: |
+          curl -L -o fuseki.tar.gz \
+            https://archive.apache.org/dist/jena/binaries/apache-jena-fuseki-4.10.0.tar.gz
+          tar xzf fuseki.tar.gz
+          ln -s apache-jena-fuseki-4.10.0 fuseki
+
+      - name: Iniciar servidor Fuseki en background
+        run: |
+          cd fuseki
+          nohup ./fuseki-server --mem --update /ds &
+          sleep 15
+          curl -s -o /dev/null -w "%{http_code}" http://localhost:3030/$/ping
+
+      - name: Cargar datasets Turtle de ejemplo en Fuseki
+        run: |
+          set -e
+          for f in $(find . -name '*.ttl' -not -path './.git/*' -not -path './fuseki/*'); do
+            echo "Cargando $f en /ds/data"
+            curl -s -X POST \
+              -H "Content-Type: text/turtle" \
+              --data-binary @"$f" \
+              http://localhost:3030/ds/data
+          done
+
+      - name: Ejecutar cada consulta .rq y verificar respuesta
+        run: |
+          set -e
+          EXIT=0
+          for f in $(find . -name '*.rq' -not -path './.git/*' -not -path './fuseki/*'); do
+            echo "::group::Ejecutando $f"
+            QUERY=$(cat "$f")
+            HTTP_CODE=$(curl -s -o "result_$(basename $f).json" -w "%{http_code}" \
+                        -G http://localhost:3030/ds/query \
+                        --data-urlencode "query=$QUERY" \
+                        -H "Accept: application/sparql-results+json")
+            if [ "$HTTP_CODE" != "200" ]; then
+              echo "::error file=$f::Consulta devolvió HTTP $HTTP_CODE"
+              cat "result_$(basename $f).json"
+              EXIT=1
+            else
+              BINDINGS=$(python3 -c \
+                "import json,sys; d=json.load(open('result_$(basename $f).json')); print(len(d.get('results',{}).get('bindings',[])))")
+              echo "OK: $f → $BINDINGS resultados"
+            fi
+            echo "::endgroup::"
+          done
+          exit $EXIT
+
+      - name: Subir resultados como artefacto
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultados-sparql
+          path: result_*.json
+          if-no-files-found: ignore

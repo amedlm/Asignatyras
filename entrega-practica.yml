@@ -1,0 +1,53 @@
+name: Entrega de práctica
+description: Plantilla para la entrega formal de una práctica del curso
+title: "[ENTREGA] <código_práctica> - <nombre_estudiante>"
+labels: ["entrega", "needs-review"]
+assignees: []
+body:
+  - type: input
+    id: practica
+    attributes:
+      label: Código de la práctica
+      placeholder: ej. P3-OWL
+    validations:
+      required: true
+  - type: input
+    id: nombre
+    attributes:
+      label: Nombre del estudiante
+      placeholder: Nombre completo
+    validations:
+      required: true
+  - type: input
+    id: grupo
+    attributes:
+      label: Grupo
+      placeholder: ej. CInfo-2026
+    validations:
+      required: true
+  - type: input
+    id: repo_url
+    attributes:
+      label: URL del repositorio entregado (fork)
+      placeholder: https://github.com/usuario/web-semantica-p3-owl
+    validations:
+      required: true
+  - type: textarea
+    id: reflexion
+    attributes:
+      label: Reflexión sobre el aprendizaje
+      description: 3-5 líneas sobre lo que aprendiste y lo que te costó
+    validations:
+      required: true
+  - type: checkboxes
+    id: autoeval
+    attributes:
+      label: Checklist de autoevaluación
+      options:
+        - label: He probado que el código/consulta funciona
+        - label: He documentado el código con comentarios
+        - label: He revisado la rúbrica de evaluación
+        - label: He citado todas las fuentes utilizadas
+        - label: He hecho al menos un commit por cada subtarea
+    validations:
+      required: true

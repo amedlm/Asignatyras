@@ -1,0 +1,87 @@
+# Validación de ontologías OWL con robot y razonador HermiT
+# Se ejecuta en cada push o PR que toque archivos *.owl o *.ttl en cualquier
+# subcarpeta del repositorio. Forma parte del autograding de la práctica P2-OWL.
+name: Validar OWL
+
+on:
+  push:
+    paths:
+      - '**/*.owl'
+      - '**/*.ttl'
+      - '.github/workflows/validar-owl.yml'
+  pull_request:
+    paths:
+      - '**/*.owl'
+      - '**/*.ttl'
+  workflow_dispatch:
+
+jobs:
+  validar-owl:
+    name: Validar sintaxis y consistencia OWL
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Descargar robot (W3C OWL toolchain)
+        run: |
+          curl -L -o robot.jar \
+            https://github.com/ontodev/robot/releases/download/v1.9.6/robot.jar
+          java -jar robot.jar --version
+
+      - name: Encontrar ontologías OWL/Turtle
+        id: buscar
+        run: |
+          set -e
+          FILES=$(find . -type f \( -name '*.owl' -o -name '*.ttl' \) \
+                  -not -path './.git/*' -not -path './node_modules/*' \
+                  | tr '\n' ' ')
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+          echo "Ontologías encontradas: $FILES"
+
+      - name: Validar sintaxis y consistencia con robot
+        if: steps.buscar.outputs.files != ''
+        run: |
+          set -e
+          EXIT=0
+          for f in ${{ steps.buscar.outputs.files }}; do
+            echo "::group::Validando $f"
+            # 1. Validación de sintaxis (RDF/XML, Turtle, OWX, etc.)
+            if ! java -jar robot.jar validate --input "$f" --format turtle \
+                 > "report_$(basename $f).txt" 2>&1; then
+              echo "::error file=$f::Error de sintaxis detectado por robot"
+              cat "report_$(basename $f).txt"
+              EXIT=1
+            else
+              echo "Sintaxis OK: $f"
+            fi
+            # 2. Verificación de consistencia lógica con razonador HermiT
+            if ! java -jar robot.jar reason --input "$f" --reasoner HermiT \
+                 --output "reasoned_$(basename $f)" 2> "reason_$(basename $f).txt"; then
+              echo "::error file=$f::Ontología inconsistente según HermiT"
+              cat "reason_$(basename $f).txt"
+              EXIT=1
+            else
+              echo "Consistencia OK: $f"
+            fi
+            echo "::endgroup::"
+          done
+          exit $EXIT
+
+      - name: Subir informes de validación como artefacto
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: informes-owl
+          path: |
+            report_*.txt
+            reason_*.txt
+            reasoned_*
+          if-no-files-found: ignore
