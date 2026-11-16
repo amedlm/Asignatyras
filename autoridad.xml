@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Plantilla MARCXML para registro de autoridad (MARC 21 Authority).
+  Ver Maxwell's Guide to Authority Work y LC MARC 21 Authority Format.
+-->
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.loc.gov/MARC21/slim https://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+
+  <leader>00000nz  a2200000n  4500</leader>
+  <controlfield tag="001">[ID-de-autoridad-local]</controlfield>
+  <controlfield tag="003">UCLV</controlfield>
+  <controlfield tag="005">20261110120000.0</controlfield>
+  <controlfield tag="008">260111|| anannbbbn          a| a      </controlfield>
+
+  <!-- Identificador VIAF (si existe) -->
+  <datafield tag="024" ind1="7" ind2=" ">
+    <subfield code="a">[número VIAF]</subfield>
+    <subfield code="2">viaf</subfield>
+  </datafield>
+
+  <!-- Encabezamiento autorizado: persona -->
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">[Apellido, Nombre]</subfield>
+    <subfield code="d">[fechas de vida, p. ej. 1953-2021]</subfield>
+  </datafield>
+
+  <!-- Variante: see-from tracing -->
+  <datafield tag="400" ind1="1" ind2=" ">
+    <subfield code="a">[Apellido, Nombre variante]</subfield>
+    <subfield code="w">nnea</subfield>
+  </datafield>
+
+  <!-- Relacionado: see-also-from -->
+  <datafield tag="500" ind1="1" ind2=" ">
+    <subfield code="a">[Apellido, Nombre relacionado]</subfield>
+    <subfield code="w">r</subfield>
+    <subfield code="i">Relacionado con</subfield>
+  </datafield>
+
+  <!-- Lugar asociado -->
+  <datafield tag="370" ind1=" " ind2=" ">
+    <subfield code="a">[lugar de nacimiento]</subfield>
+    <subfield code="c">[lugar asociado]</subfield>
+  </datafield>
+
+  <!-- Campo de actividad -->
+  <datafield tag="372" ind1=" " ind2=" ">
+    <subfield code="a">Bibliotecología</subfield>
+  </datafield>
+
+  <!-- Ocupación -->
+  <datafield tag="374" ind1=" " ind2=" ">
+    <subfield code="a">Profesor</subfield>
+  </datafield>
+
+  <!-- Género -->
+  <datafield tag="375" ind1=" " ind2=" ">
+    <subfield code="a">[masculino / femenino / desconocido]</subfield>
+  </datafield>
+
+  <!-- Fuente del encabezamiento -->
+  <datafield tag="670" ind1=" " ind2=" ">
+    <subfield code="a">[fuente de referencia]</subfield>
+    <subfield code="b">[forma encontrada en la fuente]</subfield>
+  </datafield>
+
+</record>

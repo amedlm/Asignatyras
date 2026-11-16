@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Plantilla MARCXML para monografía.
+  Sustituir los valores [ENTRE CORCHETES] por los datos del documento
+  y eliminar campos no aplicables.
+-->
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.loc.gov/MARC21/slim https://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+
+  <leader>00000nam a2200000 a 4500</leader>
+  <controlfield tag="001">[ID-de-control-local]</controlfield>
+  <controlfield tag="003">UCLV</controlfield>
+  <controlfield tag="005">20261110120000.0</controlfield>
+  <controlfield tag="008">260111s2026    cu |||||||||||||0 spa d</controlfield>
+
+  <!-- ISBN -->
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">[ISBN-13]</subfield>
+  </datafield>
+
+  <!-- Autor personal (forma autorizada) -->
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">[Apellido, Nombre del autor]</subfield>
+    <subfield code="e">author</subfield>
+    <subfield code="0">(ES-BaULE)</subfield>
+  </datafield>
+
+  <!-- Título y mención de responsabilidad -->
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">[Título principal] :</subfield>
+    <subfield code="b">[subtítulo] /</subfield>
+    <subfield code="c">[mención de responsabilidad]</subfield>
+  </datafield>
+
+  <!-- Edición -->
+  <datafield tag="250" ind1=" " ind2=" ">
+    <subfield code="a">[n.º edición]ª edición</subfield>
+  </datafield>
+
+  <!-- Publicación, distribución -->
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">[Lugar de publicación] :</subfield>
+    <subfield code="b">[Editorial],</subfield>
+    <subfield code="c">[año]</subfield>
+  </datafield>
+
+  <!-- Descripción física -->
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">[n.º páginas] páginas :</subfield>
+    <subfield code="b">ilustraciones ;</subfield>
+    <subfield code="c">[cm]</subfield>
+  </datafield>
+
+  <!-- Materia (LCSH o tesauro local) -->
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">[Término de materia principal]</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">[Término de materia secundario]</subfield>
+  </datafield>
+
+  <!-- Notas -->
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">[Nota general]</subfield>
+  </datafield>
+
+  <!-- Bibliografía -->
+  <datafield tag="504" ind1=" " ind2=" ">
+    <subfield code="a">Incluye bibliografía.</subfield>
+  </datafield>
+
+  <!-- Idioma -->
+  <datafield tag="546" ind1=" " ind2=" ">
+    <subfield code="a">Texto en español.</subfield>
+  </datafield>
+
+  <!-- Signatura local -->
+  <datafield tag="090" ind1=" " ind2=" ">
+    <subfield code="a">[signatura topográfica]</subfield>
+  </datafield>
+
+</record>
