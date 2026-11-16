@@ -1,0 +1,237 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix uclvcinfo: <http://vocabularios.uclv.cu/cinfo/> .
+
+# ============================================================
+# Tesauro de Ciencias de la Información (UCLV) — versión docente
+# Mini-tesauro con 22 conceptos para uso en Análisis Documental I (U7).
+# Idioma principal: español. Incluye mapeos a LCSH y Tesauro UNESCO.
+# Licencia: CC BY-SA 4.0
+# ============================================================
+
+uclvcinfo:tesauro-cinfo a skos:ConceptScheme ;
+    dct:title "Tesauro de Ciencias de la Información (UCLV)"@es ;
+    dct:description "Mini-tesauro docente con 22 conceptos para uso en Análisis Documental I."@es ;
+    dct:creator <https://orcid.org/0009-0001-5050-5563> ;
+    dct:created "2026-11-10"^^xsd:date ;
+    dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/spa> .
+
+# ============================================================
+# Conceptos raíz (top terms)
+# ============================================================
+
+uclvcinfo:c001 a skos:Concept ;
+    skos:prefLabel "Ciencias de la Información"@es ,
+                   "Information Sciences"@en ;
+    skos:altLabel "Bibliotecología y Ciencias de la Información"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:topConceptOf uclvcinfo:tesauro-cinfo ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85066748> ;
+    skos:narrower uclvcinfo:c002 , uclvcinfo:c003 , uclvcinfo:c004 , uclvcinfo:c005 .
+
+uclvcinfo:c002 a skos:Concept ;
+    skos:prefLabel "Bibliotecología"@es ,
+                   "Library Science"@en ;
+    skos:altLabel "Ciencia de las Bibliotecas"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c001 ;
+    skos:narrower uclvcinfo:c006 , uclvcinfo:c007 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85066749> ;
+    skos:exactMatch <http://vocabularies.unesco.org/thesaurus/concept11365> .
+
+uclvcinfo:c003 a skos:Concept ;
+    skos:prefLabel "Archivística"@es ,
+                   "Archival Science"@en ;
+    skos:altLabel "Ciencia de los Archivos"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c001 ;
+    skos:related uclvcinfo:c002 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85006890> .
+
+uclvcinfo:c004 a skos:Concept ;
+    skos:prefLabel "Documentación"@es ,
+                   "Documentation"@en ;
+    skos:altLabel "Ciencias Documentales"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c001 ;
+    skos:related uclvcinfo:c005 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85038831> .
+
+uclvcinfo:c005 a skos:Concept ;
+    skos:prefLabel "Análisis documental"@es ,
+                   "Document Analysis"@en ;
+    skos:altLabel "Análisis de documentos"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c001 ;
+    skos:related uclvcinfo:c004 ;
+    skos:narrower uclvcinfo:c008 , uclvcinfo:c009 , uclvcinfo:c010 , uclvcinfo:c011 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85038814> .
+
+# ============================================================
+# Conceptos hijos de Bibliotecología (c002)
+# ============================================================
+
+uclvcinfo:c006 a skos:Concept ;
+    skos:prefLabel "Catalogación"@es ,
+                   "Cataloguing"@en ;
+    skos:altLabel "Catalogación descriptiva"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c002 ;
+    skos:related uclvcinfo:c007 , uclvcinfo:c008 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85021064> ;
+    skos:narrower uclvcinfo:c012 , uclvcinfo:c013 .
+
+uclvcinfo:c007 a skos:Concept ;
+    skos:prefLabel "Clasificación documental"@es ,
+                   "Document Classification"@en ;
+    skos:altLabel "Sistemas de clasificación bibliográfica"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c002 ;
+    skos:related uclvcinfo:c006 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85026839> .
+
+# ============================================================
+# Conceptos hijos de Análisis documental (c005)
+# ============================================================
+
+uclvcinfo:c008 a skos:Concept ;
+    skos:prefLabel "Indización"@es ,
+                   "Indexing"@en ;
+    skos:altLabel "Indexación documental"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c005 ;
+    skos:related uclvcinfo:c009 , uclvcinfo:c010 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85066176> .
+
+uclvcinfo:c009 a skos:Concept ;
+    skos:prefLabel "Resumen documental"@es ,
+                   "Abstracting"@en ;
+    skos:altLabel "Resumen"@es , "Abstract"@en ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c005 ;
+    skos:related uclvcinfo:c008 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85001133> .
+
+uclvcinfo:c010 a skos:Concept ;
+    skos:prefLabel "Control de autoridades"@es ,
+                   "Authority Control"@en ;
+    skos:altLabel "Control de encabezamientos"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c005 ;
+    skos:related uclvcinfo:c008 , uclvcinfo:c011 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh88003925> .
+
+uclvcinfo:c011 a skos:Concept ;
+    skos:prefLabel "Metadatos"@es ,
+                   "Metadata"@en ;
+    skos:altLabel "Metainformación"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c005 ;
+    skos:related uclvcinfo:c010 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh2002006148> .
+
+# ============================================================
+# Conceptos hijos de Catalogación (c006)
+# ============================================================
+
+uclvcinfo:c012 a skos:Concept ;
+    skos:prefLabel "Catalogación descriptiva"@es ,
+                   "Descriptive Cataloguing"@en ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c006 ;
+    skos:related uclvcinfo:c013 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85021067> .
+
+uclvcinfo:c013 a skos:Concept ;
+    skos:prefLabel "Catalogación por materia"@es ,
+                   "Subject Cataloguing"@en ;
+    skos:altLabel "Catalogación temática"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c006 ;
+    skos:related uclvcinfo:c008 , uclvcinfo:c012 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85129404> .
+
+# ============================================================
+# Marcos catalográficos (hijos de c006)
+# ============================================================
+
+uclvcinfo:c014 a skos:Concept ;
+    skos:prefLabel "MARC 21"@es , "MARC 21"@en ;
+    skos:altLabel "Machine-Readable Cataloguing"@es , "MARC bibliográfico"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c012 ;
+    skos:related uclvcinfo:c015 , uclvcinfo:c016 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh96011497> .
+
+uclvcinfo:c015 a skos:Concept ;
+    skos:prefLabel "Dublin Core"@es , "Dublin Core"@en ;
+    skos:altLabel "DC"@es , "DC Simple"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c011 ;
+    skos:related uclvcinfo:c014 , uclvcinfo:c016 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh2003002375> .
+
+uclvcinfo:c016 a skos:Concept ;
+    skos:prefLabel "MODS"@es , "MODS"@en ;
+    skos:altLabel "Metadata Object Description Schema"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c011 ;
+    skos:related uclvcinfo:c014 , uclvcinfo:c015 .
+
+# ============================================================
+# Herramientas y casos aplicados
+# ============================================================
+
+uclvcinfo:c017 a skos:Concept ;
+    skos:prefLabel "CompMARC"@es ;
+    skos:altLabel "Herramienta CompMARC"@es ;
+    skos:definition "Herramienta del responsable (Leiva-Mederos) para medir completitud de registros MARC 21."@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c014 .
+
+uclvcinfo:c018 a skos:Concept ;
+    skos:prefLabel "ABCD"@es ;
+    skos:altLabel "ABCD 3.0"@es ;
+    skos:definition "Sistema integrado de gestión bibliotecaria de código abierto, adaptación UCLV sobre ISIS."@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c006 .
+
+uclvcinfo:c019 a skos:Concept ;
+    skos:prefLabel "ISBD"@es , "ISBD"@en ;
+    skos:altLabel "International Standard Bibliographic Description"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c012 ;
+    skos:related uclvcinfo:c014 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85067411> .
+
+uclvcinfo:c020 a skos:Concept ;
+    skos:prefLabel "RDA"@es , "RDA"@en ;
+    skos:altLabel "Resource Description and Access"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c012 ;
+    skos:related uclvcinfo:c014 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh2012002453> .
+
+uclvcinfo:c021 a skos:Concept ;
+    skos:prefLabel "Tesauros"@es , "Thesauri"@en ;
+    skos:altLabel "Lenguajes documentales jerárquicos"@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c008 ;
+    skos:related uclvcinfo:c007 ;
+    skos:exactMatch <http://id.loc.gov/authorities/subjects/sh85134860> .
+
+uclvcinfo:c022 a skos:Concept ;
+    skos:prefLabel "SKOS"@es , "SKOS"@en ;
+    skos:altLabel "Simple Knowledge Organization System"@es ;
+    skos:definition "Estándar W3C para representar tesauros, clasificaciones y listas de encabezamientos en RDF."@es ;
+    skos:inScheme uclvcinfo:tesauro-cinfo ;
+    skos:broader uclvcinfo:c021 ;
+    skos:related uclvcinfo:c011 .
+
+# Marcar los top concepts en el scheme
+uclvcinfo:tesauro-cinfo skos:hasTopConcept uclvcinfo:c001 .
