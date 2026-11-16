@@ -1,0 +1,5 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://vivo.uclv.edu.cu/individual/">
+  <j.0:Profesor rdf:about="http://vivo.uclv.edu.cu/individual/n4633"/>
+</rdf:RDF>

@@ -1,0 +1,638 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/ontologies/dspace#"
+     xml:base="http://example.org/ontologies/dspace"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:coar="http://purl.org/coar/resource_type/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontologies/dspace#esParteDe -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologies/dspace#esParteDe">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#MaterialPeriodistico"/>
+        <rdfs:range rdf:resource="http://example.org/ontologies/dspace#Edicion"/>
+        <rdfs:label xml:lang="es">es parte de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#publicadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologies/dspace#publicadoPor">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://example.org/ontologies/dspace#Organizacion"/>
+        <rdfs:label xml:lang="es">publicado por</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#tieneAutor -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologies/dspace#tieneAutor">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://example.org/ontologies/dspace#Persona"/>
+        <rdfs:label xml:lang="es">tiene autor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#tieneEdicion -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologies/dspace#tieneEdicion">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#PublicacionSeriada"/>
+        <rdfs:range rdf:resource="http://example.org/ontologies/dspace#Edicion"/>
+        <rdfs:label xml:lang="es">tiene edición</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#tieneRelacionCon -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologies/dspace#tieneRelacionCon">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#PublicacionSeriada"/>
+        <rdfs:range rdf:resource="http://example.org/ontologies/dspace#PublicacionSeriada"/>
+        <rdfs:label xml:lang="es">tiene relación con</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#tieneSuplemento -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologies/dspace#tieneSuplemento">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#PublicacionSeriada"/>
+        <rdfs:range rdf:resource="http://example.org/ontologies/dspace#Suplemento"/>
+        <rdfs:label xml:lang="es">tiene suplemento</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#usaVocabulario -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologies/dspace#usaVocabulario">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://example.org/ontologies/dspace#VocabularioCOAR"/>
+        <rdfs:label xml:lang="es">usa vocabulario</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontologies/dspace#audiencia -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#audiencia">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#PublicacionSeriada"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">audiencia</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#cobertura -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#cobertura">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">cobertura</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#derechos -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#derechos">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label xml:lang="es">derechos</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#descripcion -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#descripcion">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">descripción</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#descriptorGeografico -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#descriptorGeografico">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#descriptorOnomastico -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#descriptorOnomastico">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#descriptorTematico -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#descriptorTematico">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#fechaCreacion -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#fechaCreacion">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="es">fecha de creación</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#fechaPublicacion -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#fechaPublicacion">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="es">fecha de publicación</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#formatoDigital -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#formatoDigital">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">formato digital</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#formatoOriginal -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#formatoOriginal">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">formato original</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#frecuencia -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#frecuencia">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#PublicacionSeriada"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">frecuencia</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#identificadorPersistente -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#identificadorPersistente">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label xml:lang="es">identificador persistente</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#idioma -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#idioma">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">idioma</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#isbn -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#isbn">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#Monografia"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">ISBN</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#issn -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#issn">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#PublicacionSeriada"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">ISSN</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#numeroEdicion -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#numeroEdicion">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#Edicion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">número de edición</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#paginaFinal -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#paginaFinal">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#MaterialPeriodistico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="es">página final</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#paginaInicio -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#paginaInicio">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#MaterialPeriodistico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="es">página de inicio</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#tipoDspace -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#tipoDspace">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">tipo en DSpace</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#titulo -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologies/dspace#titulo">
+        <rdfs:domain rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">título</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontologies/dspace#Caricatura -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#Caricatura">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#Imagen"/>
+        <rdfs:label xml:lang="es">Caricatura</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#Edicion -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#Edicion">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#PublicacionSeriada"/>
+        <rdfs:comment xml:lang="es">Conjunto de volúmenes y números que se publican en una Publicación Seriada</rdfs:comment>
+        <rdfs:label xml:lang="es">Edición</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#Fotografia -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#Fotografia">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#Imagen"/>
+        <rdfs:label xml:lang="es">Fotografía</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#Imagen -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#Imagen">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:comment xml:lang="es">Fotografías y caricaturas exclusivas de los medios de prensa</rdfs:comment>
+        <rdfs:label xml:lang="es">Imagen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#MaterialPeriodistico -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#MaterialPeriodistico">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:comment xml:lang="es">Contenidos periodísticos fundamentales publicados en una Edición</rdfs:comment>
+        <rdfs:label xml:lang="es">Material Periodístico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#Monografia -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#Monografia">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:comment xml:lang="es">Publicación no seriada, publicada de principio a fin, independientemente de la extensión</rdfs:comment>
+        <rdfs:label xml:lang="es">Monografía</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#ObjetoDigital -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#ObjetoDigital">
+        <rdfs:label xml:lang="es">Objeto Digital</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#Organizacion -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#Organizacion">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:label xml:lang="es">Organización</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#Persona -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#Persona">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label xml:lang="es">Persona</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#PublicacionSeriada -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#PublicacionSeriada">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:comment xml:lang="es">Conjunto de títulos de publicaciones con salida periódica. Conjunto de títulos de publicaciones (nivel monográfico), tengan salida periódica, o sea, sus volúmenes o números se suceden en orden numérico o cronológico, bajo un título común y en numero indefinido, con una periodicidad fijada y  cuyo formato original sea impreso.</rdfs:comment>
+        <rdfs:label xml:lang="es">Publicación Seriada</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#Suplemento -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#Suplemento">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#ObjetoDigital"/>
+        <rdfs:comment xml:lang="es">Publicación seriada subordinada a un título de Revista o Periódico. Tipo de publicación seriada pero siempre subordinado a un título de Revista o Periódico particular. Puede abordar temas particulares o editarse para un tipo de audiencia. Cuenta con número seriado y frecuencia propios, pero su relación de dependencia es necesario establecerla. Puede haber más de un Suplemento por publicación seriada. El modelo es para las versiones impresas.</rdfs:comment>
+        <rdfs:label xml:lang="es">Suplemento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#VocabularioCOAR -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#VocabularioCOAR">
+        <rdfs:label xml:lang="es">Vocabulario COAR</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#VocabularioDEPRENSA -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#VocabularioDEPRENSA"/>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#VocabularioFrecuencia -->
+
+    <owl:Class rdf:about="http://example.org/ontologies/dspace#VocabularioFrecuencia">
+        <rdfs:comment xml:lang="es">Vocabulario de frecuencia de Dublin Core</rdfs:comment>
+        <rdfs:label xml:lang="es">Vocabulario de Frecuencia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Anuarios -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Anuarios">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#Monografia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Atlas -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Atlas">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#Monografia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Documentos_de_Archivo -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Documentos_de_Archivo">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#Monografia"/>
+        <rdfs:comment>Unidad Documental Simple, Expedientes, Legajos, etc.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Folletos -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Folletos">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#Monografia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Informes -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Informes">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#Monografia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Libros -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Libros">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#Monografia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Memorias -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Memorias">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#Monografia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Música_Impresa -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Música_Impresa">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#Monografia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Partituras -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Partituras">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#Monografia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Partituras_Música_Manuscrita -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Partituras_Música_Manuscrita">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#Monografia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Proyectos -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Proyectos">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologies/dspace#Monografia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontologies/dspace#VocabularioDEPRENSA -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologies/dspace#VocabularioDEPRENSA"/>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#descriptorGeografico -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologies/dspace#descriptorGeografico">
+        <usaVocabulario rdf:resource="http://example.org/ontologies/dspace#VocabularioDEPRENSA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#descriptorOnomastico -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologies/dspace#descriptorOnomastico">
+        <usaVocabulario rdf:resource="http://example.org/ontologies/dspace#VocabularioDEPRENSA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologies/dspace#descriptorTematico -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologies/dspace#descriptorTematico">
+        <usaVocabulario rdf:resource="http://example.org/ontologies/dspace#VocabularioDEPRENSA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://example.org/ontologies/dspace#VocabularioDEPRENSA">
+        <rdfs:label xml:lang="es">Vocabulario DEPRENSA</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontologies/dspace#descriptorGeografico">
+        <rdfs:label xml:lang="es">descriptor geográfico</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontologies/dspace#descriptorOnomastico">
+        <rdfs:label xml:lang="es">descriptor onomástico</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontologies/dspace#descriptorTematico">
+        <rdfs:label xml:lang="es">descriptor temático</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

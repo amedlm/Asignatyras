@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ejemplo/turismo//"
+     xml:base="http://www.ejemplo/turismo//"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:turismo="http://www.ejemplo/turismo/">
+    <owl:Ontology rdf:about="http://www.ejemplo/turismo/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ejemplo/turismo/cercaDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo/turismo/cercaDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ejemplo/turismo/esCapitalDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo/turismo/esCapitalDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ejemplo/turismo/Ciudad"/>
+        <rdfs:range rdf:resource="http://www.ejemplo/turismo/Lugar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ejemplo/turismo/esVisitadaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo/turismo/esVisitadaPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.ejemplo/turismo/visita"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ejemplo/turismo/estaEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo/turismo/estaEn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.ejemplo/turismo/tieneUbicacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ejemplo/turismo/tieneDireccion -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo/turismo/tieneDireccion">
+        <rdfs:subPropertyOf rdf:resource="http://www.ejemplo/turismo/tieneUbicacion"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ejemplo/turismo/Evento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ejemplo/turismo/tieneServicio -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo/turismo/tieneServicio"/>
+    
+
+
+    <!-- http://www.ejemplo/turismo/tieneUbicacion -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo/turismo/tieneUbicacion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ejemplo/turismo/Evento"/>
+        <rdfs:range rdf:resource="http://www.ejemplo/turismo/Lugar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ejemplo/turismo/visita -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo/turismo/visita">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ejemplo/turismo/Atraccion -->
+
+    <owl:Class rdf:about="http://www.ejemplo/turismo/Atraccion">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo/turismo/Lugar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo/turismo/Ciudad -->
+
+    <owl:Class rdf:about="http://www.ejemplo/turismo/Ciudad">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo/turismo/Lugar"/>
+        <owl:disjointWith rdf:resource="http://www.ejemplo/turismo/Pais"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo/turismo/EsValioso -->
+
+    <owl:Class rdf:about="http://www.ejemplo/turismo/EsValioso"/>
+    
+
+
+    <!-- http://www.ejemplo/turismo/Evento -->
+
+    <owl:Class rdf:about="http://www.ejemplo/turismo/Evento">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ejemplo/turismo/tieneUbicacion"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ejemplo/turismo/Lugar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo/turismo/Festival -->
+
+    <owl:Class rdf:about="http://www.ejemplo/turismo/Festival">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo/turismo/Evento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo/turismo/FestivalDeComida -->
+
+    <owl:Class rdf:about="http://www.ejemplo/turismo/FestivalDeComida">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo/turismo/Festival"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo/turismo/Hotel -->
+
+    <owl:Class rdf:about="http://www.ejemplo/turismo/Hotel">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo/turismo/Lugar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo/turismo/HotelDeLujo -->
+
+    <owl:Class rdf:about="http://www.ejemplo/turismo/HotelDeLujo">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo/turismo/Hotel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo/turismo/Lugar -->
+
+    <owl:Class rdf:about="http://www.ejemplo/turismo/Lugar"/>
+    
+
+
+    <!-- http://www.ejemplo/turismo/Pais -->
+
+    <owl:Class rdf:about="http://www.ejemplo/turismo/Pais"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ejemplo/turismo/Chile -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo/turismo/Chile">
+        <rdf:type rdf:resource="http://www.ejemplo/turismo/Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo/turismo/HotelSantiago -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo/turismo/HotelSantiago">
+        <rdf:type rdf:resource="http://www.ejemplo/turismo/Hotel"/>
+        <turismo:tieneServicio rdf:resource="http://www.ejemplo/turismo/WifiPremium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo/turismo/MercadoCentral -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo/turismo/MercadoCentral">
+        <rdf:type rdf:resource="http://www.ejemplo/turismo/Atraccion"/>
+        <turismo:estaEn rdf:resource="http://www.ejemplo/turismo/Santiago"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo/turismo/NamFerstival -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo/turismo/NamFerstival">
+        <rdf:type rdf:resource="http://www.ejemplo/turismo/FestivalDeComida"/>
+        <turismo:tieneDireccion rdf:resource="http://www.ejemplo/turismo/MercadoCentral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo/turismo/Santiago -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo/turismo/Santiago">
+        <rdf:type rdf:resource="http://www.ejemplo/turismo/Ciudad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo/turismo/WifiPremium -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo/turismo/WifiPremium">
+        <rdf:type rdf:resource="http://www.ejemplo/turismo/EsValioso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.ejemplo/turismo//h">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ejemplo/turismo//s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.ejemplo/turismo/Hotel"/>
+                        <swrl:argument1 rdf:resource="http://www.ejemplo/turismo//h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.ejemplo/turismo/tieneServicio"/>
+                                <swrl:argument1 rdf:resource="http://www.ejemplo/turismo//h"/>
+                                <swrl:argument2 rdf:resource="http://www.ejemplo/turismo//s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.ejemplo/turismo/EsValioso"/>
+                                        <swrl:argument1 rdf:resource="http://www.ejemplo/turismo//s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.ejemplo/turismo/HotelDeLujo"/>
+                        <swrl:argument1 rdf:resource="http://www.ejemplo/turismo//h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

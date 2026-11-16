@@ -1,0 +1,2596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns="http://onto-finallife-uti.org/ontology#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:prov="http://www.w3.org/ns/prov#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#ValueConflict">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#EthicalEntity"/>
+    <rdfs:label xml:lang="es">Conflicto de valores</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#FamilyMember">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#Agent"/>
+    <rdfs:label xml:lang="es">Familiar</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N55c6144f6df9415e8bed5a50e06d2853">
+    <rdf:first rdf:nodeID="Nd578237633f34b97a17307d443046437"/>
+    <rdf:rest rdf:nodeID="N3ca4d85da5be41d3817299afc8b4c834"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Bioethicist">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Bioeticista</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#HealthcareProfessional"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#EthicsCommitteeMember"/>
+    <rdfs:comment xml:lang="es">Miembro del comité de ética clínica.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N91c9c8aa7d964f4db98ecd831e4fd7de">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasTreatmentOption"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_opt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasPrognosis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#Prognosis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#MultipleOrganFailureSyndrome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalState"/>
+    <rdfs:label xml:lang="es">Síndrome de fallo multiorgánico</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule17_ValuePrioritization">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 17: Priorización de valores en conflicto</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ ValueConflict(?conflict) ∧ hasValue(?conflict,?v1) ∧ hasValue(?conflict,?v2) ∧ hasPriority(?v1,'high') ∧ hasPatientPreference(?p,?v1) → PrioritizeValue(?v1)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#LegalEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Entidad del marco legal</rdfs:label>
+    <rdfs:comment xml:lang="es">Superclase de las entidades relativas a validez legal e institucional de las decisiones.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6ae47f43693745ce86352ed823f0231f">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasPrognosis"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_pr"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#RespiratoryFailure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#OrganFailure"/>
+    <rdfs:label xml:lang="es">Fallo respiratorio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#SerumCreatinine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#RenalBiomarker"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#LaboratoryTest"/>
+    <rdfs:label xml:lang="es">Creatinina sérica</rdfs:label>
+    <skos:exactMatch rdf:resource="http://loinc.org/2160-0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8ab67c2b496f4e7789e4db1359ec02b2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasValue"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_conflict"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_v1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#VasoactiveSupport">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#TreatmentOption"/>
+    <rdfs:label xml:lang="es">Soporte vasoactivo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#PEEP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#RespiratoryParameter"/>
+    <rdfs:label xml:lang="es">Presión positiva al final de la espiración (PEEP)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule4_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 4 (RDF/SWRL): Detección de conflicto autonomía-beneficencia</rdfs:label>
+    <swrl:body rdf:nodeID="N82b5a88ada5a410fbd0d100777a00663"/>
+    <swrl:head rdf:nodeID="Naac6d309e8bb4c92beedfe71fd86831a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N46db7fcab665416bb7f9f57afd06f71f">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#ComfortMeasures"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule6_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 6 (RDF/SWRL): Compatibilidad opción-valor</rdfs:label>
+    <swrl:body rdf:nodeID="Ne44d003fc043418ea6a7382950122f45"/>
+    <swrl:head rdf:nodeID="N0392b60708334036b9d08488faadfa57"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na2a68c9362ca41dabcd00542b0267537">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasReversalPotential"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#TemporalEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Entidad temporal</rdfs:label>
+    <rdfs:comment xml:lang="es">Alineada con time:TemporalEntity de la TIME Ontology (W3C).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N09e6caec9b694c52a1d984ebd07272b6">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasSeverity"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_harm"/>
+    <swrl:argument2>high</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_tw">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0651d9fe180a4499ab01e72411bfe2bc">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasBenefit"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_opt"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_ben"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#CardiovascularFailure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#OrganFailure"/>
+    <rdfs:label xml:lang="es">Fallo cardiovascular</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasDecision">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#Decision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasPrinciple">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#EthicalPrinciple"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N906cec443aea4551ad7d5ddf4a76f555">
+    <rdf:first rdf:nodeID="N3d9e254e291e4e778b2e2c22f5fc9344"/>
+    <rdf:rest rdf:nodeID="N7d760bc3566a4e69b0cb284fef1eee25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#ClinicalState">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalEntity"/>
+    <rdfs:label xml:lang="es">Estado clínico</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:title>OntoFinalLife-UTI: Ontología Clínico-Ética Integrada para Decisiones de Final de Vida en UCI</dc:title>
+    <dc:creator>Amed Leiva Mederos</dc:creator>
+    <dc:creator>José Antonio Senso Ruíz</dc:creator>
+    <dc:creator>Fernando Ortiz Rodriguez</dc:creator>
+    <dc:creator>Armando David Caballero Font</dc:creator>
+    <dc:creator>María Matilde García Lorenzo</dc:creator>
+    <dc:creator>Rafael Bello Pérez</dc:creator>
+    <dc:creator>Lisandra Díaz de la Paz</dc:creator>
+    <dc:creator>Daniel Gálvez Lio</dc:creator>
+    <rdfs:comment>Ontología OWL 2 DL (perfil EL++) que integra la dimensión clínica objetiva,
+la dimensión ética normativa y la dimensión evaluativa personal para decisiones de
+limitación del esfuerzo terapéutico en UCI. Reutiliza SNOMED CT, LOINC, ICNP, TIME
+Ontology y PROV-O, e incorpora 21 reglas SWRL organizadas en 6 categorías funcionales.</rdfs:comment>
+    <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/prov-o"/>
+    <owl:versionInfo>1.0 - basado en el manuscrito OntoFinalLife-UTI</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#CarlosM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <rdfs:label xml:lang="es">Carlos M.</rdfs:label>
+    <rdfs:comment>Paciente de 78 años, EPOC terminal, 14 días en UCI, SDRA refractario y fallo multiorgánico.</rdfs:comment>
+    <hasClinicalState rdf:resource="http://onto-finallife-uti.org/ontology#cs1"/>
+    <hasPrognosis rdf:resource="http://onto-finallife-uti.org/ontology#pr1"/>
+    <hasAdvanceDirective rdf:resource="http://onto-finallife-uti.org/ontology#AD_CarlosM"/>
+    <hasTreatmentOption rdf:resource="http://onto-finallife-uti.org/ontology#CurrentVentilation"/>
+    <hasAnalysis rdf:resource="http://onto-finallife-uti.org/ontology#sofa_CarlosM"/>
+    <hasAnalysis rdf:resource="http://onto-finallife-uti.org/ontology#creatinine_CarlosM"/>
+    <hasAnalysis rdf:resource="http://onto-finallife-uti.org/ontology#bilirubin_CarlosM"/>
+    <hasAnalysis rdf:resource="http://onto-finallife-uti.org/ontology#lactate_CarlosM"/>
+    <hasAnalysis rdf:resource="http://onto-finallife-uti.org/ontology#fio2_CarlosM"/>
+    <hasAnalysis rdf:resource="http://onto-finallife-uti.org/ontology#peep_CarlosM"/>
+    <hasAnalysis rdf:resource="http://onto-finallife-uti.org/ontology#norepi_CarlosM"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N81b76d56e2f144c4b458ce645e10ee37">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasRiskOfHarm"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_opt"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_harm"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7cdd8fda7a9a41f89757280282e9c1e5">
+    <rdf:first rdf:nodeID="N9dab9053b2874e9cacbb8665877a7585"/>
+    <rdf:rest rdf:nodeID="Nb6dcfd104a7641b495c5a5c9901d3b6a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule14_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 14 (RDF/SWRL): Detección de necesidad de reevaluación</rdfs:label>
+    <swrl:body rdf:nodeID="Ncd3b053c263a41a784f9ef4c066631b8"/>
+    <swrl:head rdf:nodeID="Nd384b9029f5f423f90fdde6745b7d2a2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na96711efdcbe49c6a9a9124a504b5f5a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasAgent"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_a2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8f6c8f0345d647a8a1477916df182ee8">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasPrinciple"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_val1"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#Autonomy"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6678ff5439514e379de1820302041c70">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+    <swrl:arguments rdf:nodeID="Nca525cbb392a44b59d41018262f037a4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N158f0433d9564574ac349c4798351a09">
+    <rdf:first rdf:nodeID="N27a244d6aed443c4bfef190337873681"/>
+    <rdf:rest rdf:nodeID="N7cdd8fda7a9a41f89757280282e9c1e5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4b9d53f63cea4dbd8765b2a1524ed6af">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasDecisionProcess"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#RenalBiomarker">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#Biomarker"/>
+    <rdfs:label xml:lang="es">Biomarcador renal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndbdbd347993a4c29900f0fe20550fd13">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasValueDocumentation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N832fd41402614b62a00e6d2cb8d71d87">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#MultipleOrganFailureSituation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalState"/>
+    <rdfs:label xml:lang="es">Situación de fallo multiorgánico</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb5900c6fcdce4902992ef98e225bbcf7">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#differentFrom"/>
+    <swrl:arguments rdf:nodeID="N8d8bf6218047425c8e837d44f7b07a95"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasAdvanceDirective">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#AdvanceDirective"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6171196a0cb34148955d464406f25d44">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasTreatmentOption"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_opt"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb719626517ad4975b86d10e33ae16222">
+    <rdf:first rdf:nodeID="N5d79a779208f45c98703acad02d13c10"/>
+    <rdf:rest rdf:nodeID="N5d4dae3764344058b167636fbe903e09"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N11f86307e30b447e9ed83ba751c37120">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#CompleteDocumentation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#TotalBilirubin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#HepaticBiomarker"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#LaboratoryTest"/>
+    <rdfs:label xml:lang="es">Bilirrubina total</rdfs:label>
+    <skos:exactMatch rdf:resource="http://loinc.org/1975-2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Justice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#EthicalPrinciple"/>
+    <rdfs:label xml:lang="es">Justicia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd578237633f34b97a17307d443046437">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasAgent"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd1f48d801bb941b1ad59333ff625d70a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#expressesValue"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_val1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#appliesJurisdiction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#LegalValidity"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#Jurisdiction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#CurrentVentilation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#InvasiveMechanicalVentilation"/>
+    <incompatibleWith rdf:resource="http://onto-finallife-uti.org/ontology#Non_Suffering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasOrganFailure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalState"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#OrganFailure"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2a20ebe282e7435f921f433e5a72c145">
+    <rdf:first rdf:nodeID="N7f2291034adb43d0bcde5a32d63852ca"/>
+    <rdf:rest rdf:nodeID="N0f8fd8f11dfd4aeda0c2a88f7563be6d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#InstitutionalPolicy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Política institucional</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#LegalEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nedc37a976fc540ed99d925866db47847">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasClinicalState"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule7_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 7 (RDF/SWRL): Activación de consulta al comité de ética</rdfs:label>
+    <swrl:body rdf:nodeID="Nb719626517ad4975b86d10e33ae16222"/>
+    <swrl:head rdf:nodeID="N6e15dff799734203bf9a0136a4865d30"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncec88681d7e2478fb9543edee7c895f0">
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0ed1fbf8d3ad4ee8b3200f86e0d9e9d2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na2ccfcab7cf64bf5ab70157088821742">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#basedOnPrinciple"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_opt"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#Beneficence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Nurse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#HealthcareProfessional"/>
+    <rdfs:label xml:lang="es">Enfermero/a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na283329c5d38413580a7325990fabfc4">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasDecisionProcess"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6549a17557ed45d58ac1c9cc2e5f7a8a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasTemporalValidity"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_d"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_tv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd384b9029f5f423f90fdde6745b7d2a2">
+    <rdf:first rdf:nodeID="Nd7c8d7ad07994e2780a79618e415ea00"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N024cef2e1b204127adf4d4b53a064db9">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#IndicatedPalliativeCare"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7b5a173dc1d24682b3acbd9e4015bc8d">
+    <rdf:first rdf:nodeID="N47ab4cf9fa004b7baf3ad027e2609bff"/>
+    <rdf:rest rdf:nodeID="N07519873ba954e2ea4c0a57fc6a86ed7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasDecisionTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_p">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbf7f93e3b94c40c6828841cae25cbe8c">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasTimestamp"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_t"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8e43e6dd2b6e450b831988d9cb9e4015">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_of2"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasReversalPotential">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalState"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule2_RefractorySuffering">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 2: Detección de sufrimiento refractario</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasClinicalState(?p,?cs) ∧ recordsRefractorySuffering(?cs,true) ∧ hasSymptomBurden(?cs,?burden) ∧ swrlb:greaterThan(?burden,7) → RefractorySufferingSituation(?cs)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2e835e2ab7cb4869a183284f0433faa5">
+    <rdf:first rdf:nodeID="Nf48d00ab0ebe44edacce52dea9056bbf"/>
+    <rdf:rest rdf:nodeID="Ne888042ffa464e1d9c3f7bdf8c4c86ed"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7d08a4a94eae419480bb52434e0d5960">
+    <rdf:first rdf:nodeID="N134efdb54dfe486591cebf2153b18a90"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule1_variable_p">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#HepaticFailure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#OrganFailure"/>
+    <rdfs:label xml:lang="es">Fallo hepático</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule1_TherapeuticFutility">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 1: Identificación de futilidad terapéutica</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasClinicalState(?p,?cs) ∧ hasReversalPotential(?cs,false) ∧ hasPrognosis(?p,?pr) ∧ hasSurvivalProbability(?pr,?prob) ∧ swrlb:lessThan(?prob,0.01) → Situation_Futility(?cs)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_burden">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc68221559b8e4d1e86a5c625e4942265">
+    <rdf:first rdf:nodeID="Na2ccfcab7cf64bf5ab70157088821742"/>
+    <rdf:rest rdf:nodeID="Nd8f1eb49d4584b19bccf656acfaa6d6c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#VasoactiveDose">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalAnalysis"/>
+    <rdfs:label xml:lang="es">Dosis de fármaco vasoactivo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#QualityOfLife">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#PatientValue"/>
+    <rdfs:label xml:lang="es">Calidad de vida</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule16_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 16 (RDF/SWRL): Generación de traza de auditoría</rdfs:label>
+    <swrl:body rdf:nodeID="N143dc3d0998546fe94cbb27cc13795a8"/>
+    <swrl:head rdf:nodeID="Neb7630ba976b4309a90d35919345987c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#HepaticBiomarker">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#Biomarker"/>
+    <rdfs:label xml:lang="es">Biomarcador hepático</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N55f4b48bbe6144bda03e8c30c41fad0b">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_elapsed"/>
+    <rdf:rest rdf:nodeID="Nd7778dfb75ad407f96402ddef65b965f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3cff170865624544b64ec48966020f5e">
+    <rdf:first rdf:nodeID="Na8c4758586cc4392bf30a5a0d19adce9"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Prognosis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalEntity"/>
+    <rdfs:label xml:lang="es">Pronóstico</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N348a36cec6254166bfc98c85ea1fcf3a">
+    <rdf:first rdf:nodeID="N0ed1fbf8d3ad4ee8b3200f86e0d9e9d2"/>
+    <rdf:rest rdf:nodeID="Na29645369fe94c90bab9a7a3729b04c9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8cdb30aa06d04adda37176881d9c987f">
+    <rdf:first rdf:nodeID="N024cef2e1b204127adf4d4b53a064db9"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne861dbd98482486db90d8ee8a07a06a4">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasDecisionProcess"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule1_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 1 (RDF/SWRL): Identificación de futilidad terapéutica</rdfs:label>
+    <swrl:body rdf:nodeID="N610767f111414aa498cffad76402706d"/>
+    <swrl:head rdf:nodeID="Nc86d9f76a4ef4f80b4f676280785aab7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N32deba3af8314fa9bf18b2ff9bb9154c">
+    <rdf:first rdf:nodeID="N9f653746efdb4fba99ccbdeaa9819634"/>
+    <rdf:rest rdf:nodeID="N2e835e2ab7cb4869a183284f0433faa5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#TreatmentWindow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Ventana terapéutica</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#TemporalEntity"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    <rdfs:comment xml:lang="es">Intervalo temporal durante el cual una opción de tratamiento es clínicamente viable (usado en Regla 8).</rdfs:comment>
+    <rdfs:comment xml:lang="es">Se relaciona con time:hasBeginning y time:hasDuration para expresar el inicio y la duración disponible antes de que una opción terapéutica deje de ser viable.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule7_EthicsCommitteeActivation">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 7: Activación de consulta al comité de ética</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasDecisionProcess(?p,?dp) ∧ hasDisagreementWith(?dp,?agent) ∧ hasSeverity(?dp,'high') → requiresConsultation(?dp, EthicsCommittee)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N82b5a88ada5a410fbd0d100777a00663">
+    <rdf:first rdf:nodeID="Nf0008c18ef3d4ed49d1823d7d4d7810a"/>
+    <rdf:rest rdf:nodeID="Na92c458ccc954efb9a8935f22362b6cb"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#EvidenceBasedRecommendation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Recomendación basada en evidencia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb7961a03b32f41ee81488814ff48483c">
+    <rdf:first rdf:nodeID="Nc310d8a7faf449809aef22df7069c2a5"/>
+    <rdf:rest rdf:nodeID="N965f0452928e493ca556a1ec124d66b9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc65ac3884a2d42b7a4952f7984d484ab">
+    <rdf:first rdf:nodeID="N92be5b8173164a4588f9b003f2985be7"/>
+    <rdf:rest rdf:nodeID="N4791c2aabd4a472d95aeb7ad7c2528c3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasSeverityScoreValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#SeverityScore"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N21593ef500c1480f81e2c41a84a4b457">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasSurvivalProbability"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_pr"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_prob"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N75e6877870a04d9181b54e3a2f14d82a">
+    <rdf:first rdf:nodeID="N6549a17557ed45d58ac1c9cc2e5f7a8a"/>
+    <rdf:rest rdf:nodeID="N388c72c6a6d34cf582125421a290b1ae"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N49e82043d0cb4fc99d14a2c2dca3fe58">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasReversalPotential"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasTemporalValidity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf173bf82c1084f7f800133c9cbeb5092">
+    <rdf:first rdf:nodeID="N10dd32ab29d540adb37a6d94e5a99396"/>
+    <rdf:rest rdf:nodeID="N9d360807f377401d982e649170b3ddba"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7020fd39858541a6b913198d0326887d">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N10dd32ab29d540adb37a6d94e5a99396">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasDecisionProcess"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#RespiratoryParameter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalAnalysis"/>
+    <rdfs:label xml:lang="es">Parámetro respiratorio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Decision">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Decisión</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N514533d301f143d49ea70260fe59cebd">
+    <rdf:first rdf:nodeID="N75d2457e1a894d608a6221477ea7dd2c"/>
+    <rdf:rest rdf:nodeID="Ne390e04da14d440fa27de7873982e6c7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#cs1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#MultipleOrganFailureSyndrome"/>
+    <hasReversalPotential rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasReversalPotential>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#basedOnPrinciple">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#TreatmentOption"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#EthicalPrinciple"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_tv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3ea2ec4659c1473cb4eeab88e4606b74">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasRationaleDocumentation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbc7526ad7543474ca0a184f634f0a575">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#QualityDecision"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1212448ea3c84e94bb4b10ae63e8a115">
+    <rdf:first rdf:nodeID="N0438d2cd587543e4abba48b28619a062"/>
+    <rdf:rest rdf:nodeID="N85821136a8074dd79fcefce16d55105c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N37cf4b485a9644fbba7c14055f3c039d">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#expressesValue"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_v"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#OrganFailure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalEntity"/>
+    <rdfs:label xml:lang="es">Fallo de órgano</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#InformedConsent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Consentimiento informado</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#LegalEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb882b8c9d27f4a9980b8f0ff1a8f1f1c">
+    <rdf:first rdf:nodeID="N6d8b9fbbbe7d424d9e16487b1720a05c"/>
+    <rdf:rest rdf:nodeID="N0ed3d2c90d4e4431babf63920dab02c3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#DecisionProcess1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+    <hasAgent rdf:resource="http://onto-finallife-uti.org/ontology#Maria"/>
+    <hasAgent rdf:resource="http://onto-finallife-uti.org/ontology#ICU_Team"/>
+    <produces rdf:resource="http://onto-finallife-uti.org/ontology#Decision_Withdrawal_CarlosM"/>
+    <requiresConsultation rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalEthicsCommittee"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf8a6c528e1684f93b667313adf3a599b">
+    <rdf:first rdf:nodeID="Nde03250154d9493187c8e4931df46c97"/>
+    <rdf:rest rdf:nodeID="N32edf49c5dd7417f83169f1f3ea0d8d0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9ad3daa1e0b04740a517d96b83372069">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#produces">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#Decision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#ComfortMeasures">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#TreatmentOption"/>
+    <rdfs:label xml:lang="es">Medidas de confort</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naac6d309e8bb4c92beedfe71fd86831a">
+    <rdf:first rdf:nodeID="N199e9abd69bc424ab84ada9b825d69f7"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule11_SpecificTreatmentLimitation">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 11: Limitación específica del tratamiento</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ Situation_Futility(?cs) ∧ hasTreatmentOption(?p,?opt) ∧ hasProbabilitySurvival(?opt,?prob) ∧ swrlb:lessThan(?prob,0.01) → LimitTreatment(?opt)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#QualityDecision">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#Decision"/>
+    <rdfs:label xml:lang="es">Decisión de calidad</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0bbb04d06d234930b1978714e4faad89">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_of1"/>
+    <rdf:rest rdf:nodeID="N9de2800b0fef4b6389a139c101d372f6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb072a06d67e54f44a17eed0d07858ad2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Situation_Futility"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Beneficence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#EthicalPrinciple"/>
+    <rdfs:label xml:lang="es">Beneficencia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule4_AutonomyBeneficenceConflict">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 4: Detección de conflicto autonomía-beneficencia</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ expressesValue(?p,?val1) ∧ hasPrinciple(?val1,Autonomy) ∧ hasTreatmentOption(?p,?opt) ∧ basedOnPrinciple(?opt,Beneficence) ∧ incompatibleWith(?opt,?val1) → ValueConflict(?conflict)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N60e877a20a324db7a3a65dc5e65458ad">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasSymptomBurden"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_burden"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasUrgency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2ebafa5057c04478ac522d48abb39d3e">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasAgent"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N44cc63c50fda485a9a467e8b08a0c079">
+    <rdf:first rdf:nodeID="N21593ef500c1480f81e2c41a84a4b457"/>
+    <rdf:rest rdf:nodeID="N4d6c0ad901eb4ebcb28c4d93fa3fd4db"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_ben">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N22d2d1260321441398731aab3a6e8bce">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#differentFrom"/>
+    <swrl:arguments rdf:nodeID="N5117a3f1ac7146bfbc6e358de2404cd3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc9640edba6bd481aa627fdfbad5337f5">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasTreatmentOption"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_opt"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4791c2aabd4a472d95aeb7ad7c2528c3">
+    <rdf:first rdf:nodeID="N6ae47f43693745ce86352ed823f0231f"/>
+    <rdf:rest rdf:nodeID="N44cc63c50fda485a9a467e8b08a0c079"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbcc719e185e84126af4902fb1e46ab29">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasProbabilitySurvival"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_opt"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_prob"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd6863aaeee4e44c1a4494d2dd28dbc5d">
+    <rdf:first rdf:nodeID="N0075e4d194de4231b8d2a61fc3c315fb"/>
+    <rdf:rest rdf:nodeID="N7b5a173dc1d24682b3acbd9e4015bc8d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na521c2d5abc64019a93b4acdaa1eb235">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Situation_Futility"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbc3f6ffb4c6441069d3100dcf8911d22">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+    <swrl:arguments rdf:nodeID="N7f9f100aa1434d27ac18a1cab0497339"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasTimestamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#DirectiveValidityPeriod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Periodo de validez de la directiva anticipada</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#TemporalEntity"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nde03250154d9493187c8e4931df46c97">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasAgent"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_a1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6d8b9fbbbe7d424d9e16487b1720a05c">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule9_ProcessDocumentation">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 9: Documentación del proceso de decisión</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasDecisionProcess(?p,?dp) ∧ hasAgent(?dp,?a) ∧ hasTimestamp(?dp,?t) ∧ hasDecision(?dp,?d) → documentedBy(?d,?dp)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N03098fc6071d46f1af28366fc108a707">
+    <rdf:first rdf:nodeID="N30050c79a7b148279ed1f516ce0b5534"/>
+    <rdf:rest rdf:nodeID="Nc65ac3884a2d42b7a4952f7984d484ab"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na22c8d28e9cc4d8889dc19cdd2e062ff">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#DocumentedValueAlignment"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_v"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8d8bf6218047425c8e837d44f7b07a95">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_of1"/>
+    <rdf:rest rdf:nodeID="N8e43e6dd2b6e450b831988d9cb9e4015"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#APACHEIIScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#SeverityScore"/>
+    <rdfs:label xml:lang="es">Puntuación APACHE II</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Autonomy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#EthicalPrinciple"/>
+    <rdfs:label xml:lang="es">Autonomía</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na92c458ccc954efb9a8935f22362b6cb">
+    <rdf:first rdf:nodeID="Nd1f48d801bb941b1ad59333ff625d70a"/>
+    <rdf:rest rdf:nodeID="Ne4c27076e43f419daf60a5ea6cd5ce1e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc5cf49d1bbf04fba9eb8365c6fc1acca">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_v2"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N740b3adaeeb047408f28fd9061a3b290">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasClinicalState"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N96b9e43a214546ad902d689257223acd">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasReevaluationThreshold"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_d"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">168</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndbbf384f4f6345b4b9a4de9a3681e706">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasPriority"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_v1"/>
+    <swrl:argument2>high</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule15_DocumentationCompletenessCheck">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 15: Verificación de completitud documental</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasDecisionProcess(?p,?dp) ∧ hasClinicalData(?dp,true) ∧ hasValueDocumentation(?dp,true) ∧ hasConsensusDocumentation(?dp,true) ∧ hasRationaleDocumentation(?dp,true) → CompleteDocumentation(?dp)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N26e1bc81200347f4a487eda6598548c7">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_of2"/>
+    <rdf:rest rdf:nodeID="Nfa277a89c44543bebbb210d0a9242244"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N27a244d6aed443c4bfef190337873681">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#IndicatedPalliativeCare"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#generatesAuditTrail">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N672db45d1cc84944a27bce9c231cbbd7">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#RefractorySufferingSituation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Neef37a177bce464ca482172dd17803bc">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasPatientPreference"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_v1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N93e86328454b4028b60cad51046cfe06">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_dt"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb5348c3d182f4872a67c17b54dffc7f7">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasClinicalData"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#LegalFramework">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Marco legal aplicable</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#LegalEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N68f33696be474971b341156318c7b56c">
+    <rdf:first rdf:nodeID="N7de5099dc6de444898b3c0df029e6c8f"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#NonMaleficence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#EthicalPrinciple"/>
+    <rdfs:label xml:lang="es">No maleficencia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasEthicalConsistency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7f9f100aa1434d27ac18a1cab0497339">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_prob"/>
+    <rdf:rest rdf:nodeID="N8f04ab3bfd6045319bc232dfb8397f35"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#PatientAdvocate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Defensor del paciente</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#Agent"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#EthicsCommitteeMember"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Chaplain">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Capellán / asistente espiritual</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#Agent"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#EthicsCommitteeMember"/>
+    <rdfs:comment xml:lang="es">Participa en el comité de ética; atiende la dimensión espiritual.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule15_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 15 (RDF/SWRL): Verificación de completitud documental</rdfs:label>
+    <swrl:body rdf:nodeID="N55d5fb78110f454ab4e71c2fcf99df69"/>
+    <swrl:head rdf:nodeID="N4c5023b3c57b46a889de179e6a8c1b6b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#DecisionTimestamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Marca temporal de la decisión</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#TemporalEntity"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Instant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8100e50d8e574b6fb1187986b1e60a9a">
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Neeb9f618d2b443b78de73c162e837074">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#EvidenceBasedRecommendation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_rec"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule1_body">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N80c8a3ac33294c1a916b2f9ed7330fed">
+    <rdf:first rdf:nodeID="Nbc3f6ffb4c6441069d3100dcf8911d22"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule18_EvidenceBasedRecommendation">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 18: Recomendación basada en evidencia</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasClinicalState(?p,?cs) ∧ Situation_Futility(?cs) ∧ hasGuidelineRecommendation(?cs,?rec) ∧ hasStrengthOfRecommendation(?rec,'strong') → EvidenceBasedRecommendation(?rec)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#LimitTreatment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#TreatmentOption"/>
+    <rdfs:label xml:lang="es">Limitación del esfuerzo terapéutico (LET)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#expressesPreference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#AdvanceDirective"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#PatientValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#creatinine_CarlosM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#SerumCreatinine"/>
+    <hasBiomarkerValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.2</hasBiomarkerValue>
+    <rdfs:comment>3.2 mg/dL</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#DecisionProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Proceso de decisión</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne44d003fc043418ea6a7382950122f45">
+    <rdf:first rdf:nodeID="Nd678e9ce6f4e40238c89b0f683265e6f"/>
+    <rdf:rest rdf:nodeID="N840a273c7363446b8ddbd2deae433745"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfe7fd2f5f18e414787c5254afeace0e8">
+    <rdf:first rdf:nodeID="N9ad3daa1e0b04740a517d96b83372069"/>
+    <rdf:rest rdf:nodeID="Nc6e9b044112f4b32a396bbd271f2fae7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasTimeWindow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>Ventana temporal en horas.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasBiomarkerValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#Biomarker"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdfs:label xml:lang="es">tiene valor de biomarcador</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule2_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 2 (RDF/SWRL): Detección de sufrimiento refractario</rdfs:label>
+    <swrl:body rdf:nodeID="N5902cb2f2eaf4b44b7dccd57bd39f595"/>
+    <swrl:head rdf:nodeID="Ne0631e1ccaa3433d96b83bcd8e5175f3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N965f0452928e493ca556a1ec124d66b9">
+    <rdf:first rdf:nodeID="N6171196a0cb34148955d464406f25d44"/>
+    <rdf:rest rdf:nodeID="N45f6b50ebfb9403baf67cf7ccaa31300"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#PerfusionBiomarker">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#Biomarker"/>
+    <rdfs:label xml:lang="es">Biomarcador de perfusión tisular</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule3_MultipleOrganFailure">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 3: Identificación de fallo multiorgánico</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasClinicalState(?p,?cs) ∧ hasOrganFailure(?cs,?of1) ∧ hasOrganFailure(?cs,?of2) ∧ hasOrganFailure(?cs,?of3) ∧ [?of1≠?of2≠?of3] → MultipleOrganFailureSituation(?cs)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasSymptomBurden">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>Escala 0-10.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8507daac1040402a8d4cb12003b36e6e">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#compatibleWith"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_opt"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_val"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N075f4f2482454d718ca71cf4e4f124f5">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#ValuesAlignedOption"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_opt"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N990fea066d044258ab805af9d2536852">
+    <rdf:first rdf:nodeID="N672db45d1cc84944a27bce9c231cbbd7"/>
+    <rdf:rest rdf:nodeID="Nc84a4e4f9b3a474bb3cfcbae1c00fb48"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N524a5a61d5ae478d8ab841975441dace">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasDisagreementWith"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd7778dfb75ad407f96402ddef65b965f">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_tv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N110b7e1d4f20488a8207d5743b776714">
+    <rdf:first rdf:nodeID="N199c3943433142f9b2f0e1fbeae08c87"/>
+    <rdf:rest rdf:nodeID="N05e893ac67694095a484a6efbfcf9fa3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N92be5b8173164a4588f9b003f2985be7">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasReversalPotential"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#ValuesAlignedOption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#TreatmentOption"/>
+    <rdfs:label xml:lang="es">Opción alineada con los valores</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#EthicalEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Superclase de las entidades del dominio ético-deliberativo.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasConsensusAttempts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf7e81bf357084ddf8034ee9979f3bac0">
+    <rdf:first rdf:nodeID="N8ab67c2b496f4e7789e4db1359ec02b2"/>
+    <rdf:rest rdf:nodeID="N05e2843f7c774e489232cd111efe348d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#ReevaluationPeriod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Periodo de reevaluación</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#TemporalEntity"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    <rdfs:comment xml:lang="es">Ventana de 7 días (168h) tras la cual una decisión reversible debe reevaluarse (Regla 14).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N15fb5990e24a42a0ba0117033de9b7c4">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasClinicalAlignment"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6959844e876241ffad7653775c1d3603">
+    <rdf:first rdf:nodeID="N740b3adaeeb047408f28fd9061a3b290"/>
+    <rdf:rest rdf:nodeID="N1212448ea3c84e94bb4b10ae63e8a115"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne9e4ab92fa5a427d93efe8491c564665">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasTimestamp"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_t"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne4c27076e43f419daf60a5ea6cd5ce1e">
+    <rdf:first rdf:nodeID="N8f6c8f0345d647a8a1477916df182ee8"/>
+    <rdf:rest rdf:nodeID="N3d425f286e784c88859a5614ff47fdcd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndce2ed7aa9ce4bb89e5b5ecb050aae24">
+    <rdf:first rdf:nodeID="N924bc2900d8a402088103239384ec758"/>
+    <rdf:rest rdf:nodeID="N32deba3af8314fa9bf18b2ff9bb9154c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4d6c0ad901eb4ebcb28c4d93fa3fd4db">
+    <rdf:first rdf:nodeID="Nfd478aadf2d14b7b98db1dfbeb10d35c"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N29e707d5b53a46ad9e1d1acec88ea710">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0438d2cd587543e4abba48b28619a062">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#recordsRefractorySuffering"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf0008c18ef3d4ed49d1823d7d4d7810a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasTemporalExtent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#TemporalEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2d42a83991a44947950aba26b5726097">
+    <rdf:first rdf:nodeID="Nb5348c3d182f4872a67c17b54dffc7f7"/>
+    <rdf:rest rdf:nodeID="N998aae387e3b4208bf6e4c339c67665d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N610767f111414aa498cffad76402706d">
+    <rdf:first rdf:nodeID="Nc2442b8378214bc5a95c12c5eeaa6c24"/>
+    <rdf:rest rdf:nodeID="N03098fc6071d46f1af28366fc108a707"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6e15dff799734203bf9a0136a4865d30">
+    <rdf:first rdf:nodeID="N07e2126afde84a9f99ca6a6d210739bb"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3d9e254e291e4e778b2e2c22f5fc9344">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasEthicalConsistency"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N45f6b50ebfb9403baf67cf7ccaa31300">
+    <rdf:first rdf:nodeID="N8507daac1040402a8d4cb12003b36e6e"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N98b5efe3e7f94900bf96950561380f54">
+    <rdf:first rdf:nodeID="N832fd41402614b62a00e6d2cb8d71d87"/>
+    <rdf:rest rdf:nodeID="Neea81dc6024b43959dcbc6b2985651e7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#FiO2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#RespiratoryParameter"/>
+    <rdfs:label xml:lang="es">Fracción inspirada de oxígeno (FiO2)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6c26e92960064cae8a4d24025ec7f5dc">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#ValueConflict"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_conflict"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7de5099dc6de444898b3c0df029e6c8f">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasDisagreementWith"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_a1"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_a2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4f254dd357a640b591bf6aa1e7fd97d3">
+    <rdf:first rdf:nodeID="Na521c2d5abc64019a93b4acdaa1eb235"/>
+    <rdf:rest rdf:nodeID="N5bee7f5581c14109acaf7d6499c545aa"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#RefractorySufferingSituation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalState"/>
+    <rdfs:label xml:lang="es">Situación de sufrimiento refractario</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5b9cac4793b0496dbb5f6deb63da826a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasAdvanceDirective"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_ad"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#requiresConsultation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#EthicsCommittee"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3a4aa95258c742cd879f998c52a52a77">
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_conflict">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#SOFAScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#SeverityScore"/>
+    <rdfs:label xml:lang="es">Puntuación SOFA (Sequential Organ Failure Assessment)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N30d45393db874483ac7c5118590c7038">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#documentedBy"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_d"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N32f722a3e98949fb8784a33896e46d83">
+    <rdf:first rdf:nodeID="N6678ff5439514e379de1820302041c70"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc84a4e4f9b3a474bb3cfcbae1c00fb48">
+    <rdf:first rdf:nodeID="N49e82043d0cb4fc99d14a2c2dca3fe58"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1148e7f31d4044aa9d2a027a3cfd7bd9">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#recordsRefractorySuffering">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalState"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Agent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Agente</rdfs:label>
+    <rdfs:comment>Superclase de médico, enfermero, familiar, comité de ética.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2805b9e4c31a4d3983913c868ff03751">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasDecision"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule8_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 8 (RDF/SWRL): Determinación del nivel de urgencia</rdfs:label>
+    <swrl:body rdf:nodeID="Nd6863aaeee4e44c1a4494d2dd28dbc5d"/>
+    <swrl:head rdf:nodeID="N872014ad45d74095842b69dce0cab78a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4469384f194942479a0240b63f479ad6">
+    <rdf:first rdf:nodeID="Nbcc719e185e84126af4902fb1e46ab29"/>
+    <rdf:rest rdf:nodeID="N80c8a3ac33294c1a916b2f9ed7330fed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_harm">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule13_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 13 (RDF/SWRL): Evaluación de la calidad de la decisión</rdfs:label>
+    <swrl:body rdf:nodeID="Nef0f7735225240cd8e0d752d1fc387f7"/>
+    <swrl:head rdf:nodeID="N200387a566cf49e7a36c1ee65cd23f89"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#GlasgowComaScale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#SeverityScore"/>
+    <rdfs:label xml:lang="es">Escala de coma de Glasgow</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N67b513b683ce496897a9f7b567d306f3">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#expressesValue"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_a2"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_v2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_v2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N232286459e03460c88c50664fd5d3e44">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#differentFrom"/>
+    <swrl:arguments rdf:nodeID="N26e1bc81200347f4a487eda6598548c7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#PatientValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Valor del paciente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasDisagreementWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#Agent"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#Agent"/>
+    <rdfs:label xml:lang="es">tiene desacuerdo con</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#sofa_CarlosM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#SOFAScore"/>
+    <hasSeverityScoreValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">14.0</hasSeverityScoreValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Situation_Futility">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalState"/>
+    <rdfs:label xml:lang="es">Situación de futilidad terapéutica</rdfs:label>
+    <rdfs:comment>Inferida por la Regla 1 cuando la probabilidad de supervivencia &lt; 0.01.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd678e9ce6f4e40238c89b0f683265e6f">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#NorepinephrineDose">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#VasoactiveDose"/>
+    <rdfs:label xml:lang="es">Dosis de norepinefrina</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N83868cd78812488ea24728d5d028503f">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_elapsed"/>
+    <rdf:rest rdf:nodeID="N78e76ea8385146238f5674202f4ec23a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule14_ReevaluationNeedDetection">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 14: Detección de necesidad de reevaluación</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasDecisionProcess(?p,?dp) ∧ hasDecision(?dp,?d) ∧ hasTemporalValidity(?d,?tv) ∧ hasDecisionTime(?d,?dt) ∧ hasReevaluationThreshold(?d,168) ∧ [elapsed&gt;tv] → RequiresReevaluation(?d)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N356c807c32a740ff85556171cbf7eace">
+    <rdf:first rdf:nodeID="N96b9e43a214546ad902d689257223acd"/>
+    <rdf:rest rdf:nodeID="N4345fc6bc62c423f9fcf64b318618f49"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#SeverityScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalAnalysis"/>
+    <rdfs:label xml:lang="es">Escala de gravedad</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_val">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9de2800b0fef4b6389a139c101d372f6">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_of3"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule18_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 18 (RDF/SWRL): Recomendación basada en evidencia</rdfs:label>
+    <swrl:body rdf:nodeID="N283afb53990e4ec8b98e252bd2e6f171"/>
+    <swrl:head rdf:nodeID="N2f3665403e8044c0a793d95e9adaee26"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule21_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 21 (RDF/SWRL): Documentación de valores</rdfs:label>
+    <swrl:body rdf:nodeID="Na6076e096cf34228aaef365c552dfeba"/>
+    <swrl:head rdf:nodeID="Ncce6bf8763044402a2756ecf43aeb7f1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N168a17539dec4ddaa237a7d722fc689b">
+    <rdf:first rdf:nodeID="N7846285e5aec47f0a0a6689b014c402c"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N741fcc6563ea4dcc8ccf743afa4b2e9a">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_burden"/>
+    <rdf:rest rdf:nodeID="N8100e50d8e574b6fb1187986b1e60a9a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#basedOn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#SerumLactate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#PerfusionBiomarker"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#LaboratoryTest"/>
+    <rdfs:label xml:lang="es">Lactato sérico</rdfs:label>
+    <skos:exactMatch rdf:resource="http://loinc.org/2524-7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasClinicalAlignment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N75d2457e1a894d608a6221477ea7dd2c">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#differentFrom"/>
+    <swrl:arguments rdf:nodeID="N0bbb04d06d234930b1978714e4faad89"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#AD_CarlosM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#AdvanceDirective"/>
+    <expressesPreference rdf:resource="http://onto-finallife-uti.org/ontology#Non_Suffering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_val1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule5_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 5 (RDF/SWRL): Detección de violación de no maleficencia</rdfs:label>
+    <swrl:body rdf:nodeID="Nb882b8c9d27f4a9980b8f0ff1a8f1f1c"/>
+    <swrl:head rdf:nodeID="Nebe547b421444e9aa775c7148fc1f405"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9e889984f9074e4aae59086acd93f3d4">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasDecision"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#DocumentedValueAlignment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Alineación de valores documentada</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N08d48ed342fd4383a7a6acbfc646cc59">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
+    <swrl:arguments rdf:nodeID="N83868cd78812488ea24728d5d028503f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#RenalFailure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#OrganFailure"/>
+    <rdfs:label xml:lang="es">Fallo renal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_d">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#LaboratoryTest">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalAnalysis"/>
+    <rdfs:label xml:lang="es">Prueba de laboratorio</rdfs:label>
+    <skos:exactMatch rdf:resource="http://loinc.org"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd3a92861615346099376cdd36cec4964">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#incompatibleWith"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_opt"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_val1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Intensivist">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#HealthcareProfessional"/>
+    <rdfs:label xml:lang="es">Intensivista</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasDirectiveValidity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#AdvanceDirective"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#DirectiveValidityPeriod"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfd478aadf2d14b7b98db1dfbeb10d35c">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+    <swrl:arguments rdf:nodeID="N690a6302b6c74cb886cd9246f80d79d7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule8_UrgencyLevel">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 8: Determinación del nivel de urgencia</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasClinicalState(?p,?cs) ∧ hasReversalPotential(?cs,true) ∧ hasTimeWindow(?cs,?tw) ∧ swrlb:lessThan(?tw,24) → hasUrgency(?p,'emergency')</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd7c8d7ad07994e2780a79618e415ea00">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#RequiresReevaluation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#PrincipleViolation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#EthicalEntity"/>
+    <rdfs:label xml:lang="es">Violación de principio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#IndicatedPalliativeCare">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#PalliativeCare"/>
+    <rdfs:label xml:lang="es">Cuidados paliativos indicados</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N844957829756466582d24a4a087cccae">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+    <swrl:arguments rdf:nodeID="Nc52a0e6f00504b01b40150d4e9df1511"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nef0f7735225240cd8e0d752d1fc387f7">
+    <rdf:first rdf:nodeID="N88d52f1090144fb98f2abdadd5e56198"/>
+    <rdf:rest rdf:nodeID="Ncc2acc0e511942a982fa596d7aa54d67"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbc9f6656dc7d4954a90d077e91f22144">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+    <swrl:arguments rdf:nodeID="N741fcc6563ea4dcc8ccf743afa4b2e9a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7846285e5aec47f0a0a6689b014c402c">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasStrengthOfRecommendation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_rec"/>
+    <swrl:argument2>strong</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N143dc3d0998546fe94cbb27cc13795a8">
+    <rdf:first rdf:nodeID="Nb4b1b321b4c94f938364d4c760f57178"/>
+    <rdf:rest rdf:nodeID="Nf173bf82c1084f7f800133c9cbeb5092"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8f04ab3bfd6045319bc232dfb8397f35">
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.01</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nddedc0fdaf9b48a48f3726b1e7a34ff0">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+    <swrl:arguments rdf:nodeID="Nf52cbb91b30b4cd4821171a424575f0d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule17_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 17 (RDF/SWRL): Priorización de valores en conflicto</rdfs:label>
+    <swrl:body rdf:nodeID="N348a36cec6254166bfc98c85ea1fcf3a"/>
+    <swrl:head rdf:nodeID="N56b7f8d8f50542028ce58623d5ba3b53"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9d360807f377401d982e649170b3ddba">
+    <rdf:first rdf:nodeID="N2ebafa5057c04478ac522d48abb39d3e"/>
+    <rdf:rest rdf:nodeID="Nb0373c542c35454f9ad77dcbed0cd5ad"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule19_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 19 (RDF/SWRL): Reconocimiento de conflictos</rdfs:label>
+    <swrl:body rdf:nodeID="N678a250883a64e16b22c8c965b1a63b1"/>
+    <swrl:head rdf:nodeID="N68f33696be474971b341156318c7b56c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N478d259c32ec481589e799f24959f4d6">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasSeverity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7f440a6408ea4c51b5c091e40874f5dc">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasDecisionProcess"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2f3665403e8044c0a793d95e9adaee26">
+    <rdf:first rdf:nodeID="Neeb9f618d2b443b78de73c162e837074"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#SocialWorker">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Trabajador/a social</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#HealthcareProfessional"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N07e2126afde84a9f99ca6a6d210739bb">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#requiresConsultation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#EthicsCommittee"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule3_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 3 (RDF/SWRL): Identificación de fallo multiorgánico</rdfs:label>
+    <swrl:body rdf:nodeID="Nd28ada7ef71a4091908081b2f5268594"/>
+    <swrl:head rdf:nodeID="N9993c352f14a4931bc3c05327a0b6d57"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#EthicsCommittee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#EthicalEntity"/>
+    <rdfs:label xml:lang="es">Comité de ética clínica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc2442b8378214bc5a95c12c5eeaa6c24">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule19_ConflictRecognition">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 19: Reconocimiento de conflictos</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasAgent(?p,?a1) ∧ hasAgent(?p,?a2) ∧ expressesValue(?a1,?v1) ∧ expressesValue(?a2,?v2) ∧ swrlb:differentFrom(?v1,?v2) → hasDisagreementWith(?a1,?a2)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Decision_Withdrawal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#LimitTreatment"/>
+    <rdfs:label xml:lang="es">Retirada progresiva del soporte vital</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne20052a952db4c9a812737bac8b2246d">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#fio2_CarlosM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#FiO2"/>
+    <hasBiomarkerValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.8</hasBiomarkerValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9993c352f14a4931bc3c05327a0b6d57">
+    <rdf:first rdf:nodeID="N79b57d18772b408891bb1d047a730e27"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbaea50058faf474298751a7762e4ad8f">
+    <rdf:first rdf:nodeID="N28e3fdad974946e2bf91cc488ea320a6"/>
+    <rdf:rest rdf:nodeID="N3cff170865624544b64ec48966020f5e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0ed3d2c90d4e4431babf63920dab02c3">
+    <rdf:first rdf:nodeID="Nc9640edba6bd481aa627fdfbad5337f5"/>
+    <rdf:rest rdf:nodeID="N5b3b25ba3be24c178f54ea836966fdf3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#expressesValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#Agent"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#PatientValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N073b58a4e02349d9b9357c8398b83b94">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasUrgency"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2>emergency</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#AttendingPhysician">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Médico responsable / intensivista tratante</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#Intensivist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasGuidelineRecommendation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule12_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 12 (RDF/SWRL): Recomendación de medidas de confort</rdfs:label>
+    <swrl:body rdf:nodeID="Na3e9e80397ce4696b8de1c9b0161a348"/>
+    <swrl:head rdf:nodeID="Nd59dfda85790475b92a59fc9263d7373"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasReevaluationThreshold">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>Umbral en horas (168h = 7 días).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N43f37ff3629a4d71bebb121d5bc478c6">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasConsensus"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N840a273c7363446b8ddbd2deae433745">
+    <rdf:first rdf:nodeID="N5b9cac4793b0496dbb5f6deb63da826a"/>
+    <rdf:rest rdf:nodeID="Nb7961a03b32f41ee81488814ff48483c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#EthicalPrinciple">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#EthicalEntity"/>
+    <rdfs:label xml:lang="es">Principio ético</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#AccountabilityProtocol">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Protocolo de responsabilidad</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#LegalEntity"/>
+    <rdfs:comment xml:lang="es">Define quién decide en última instancia ante desacuerdo entre la ontología y el equipo clínico (limitación discutida en la Sección 8.3).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#pr1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#Prognosis"/>
+    <hasSurvivalProbability rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.005</hasSurvivalProbability>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf52cbb91b30b4cd4821171a424575f0d">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_burden"/>
+    <rdf:rest rdf:nodeID="Na55eb870ed34452a89e5c039474eccce"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasDecisionProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd59dfda85790475b92a59fc9263d7373">
+    <rdf:first rdf:nodeID="N46db7fcab665416bb7f9f57afd06f71f"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_prob">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na6076e096cf34228aaef365c552dfeba">
+    <rdf:first rdf:nodeID="N478d259c32ec481589e799f24959f4d6"/>
+    <rdf:rest rdf:nodeID="N13a5206a512145e3a20f6e69067c369c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5b3b25ba3be24c178f54ea836966fdf3">
+    <rdf:first rdf:nodeID="N81b76d56e2f144c4b458ce645e10ee37"/>
+    <rdf:rest rdf:nodeID="Nc18850ce998f499597eaa96318d4b986"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Option_Against_Values">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#EthicalEntity"/>
+    <rdfs:label xml:lang="es">Opción terapéutica contraria a los valores del paciente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule21_ValueDocumentation">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 21: Documentación de valores</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ expressesValue(?p,?v) ∧ hasPatientPreference(?p,?pref) ∧ hasClinicalState(?p,?cs) ∧ compatibleWith(?v,?cs) → DocumentedValueAlignment(?p,?v)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule20_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 20 (RDF/SWRL): Activación de mediación</rdfs:label>
+    <swrl:body rdf:nodeID="Nfe7fd2f5f18e414787c5254afeace0e8"/>
+    <swrl:head rdf:nodeID="N7d08a4a94eae419480bb52434e0d5960"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc310d8a7faf449809aef22df7069c2a5">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#expressesPreference"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_ad"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_val"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne390e04da14d440fa27de7873982e6c7">
+    <rdf:first rdf:nodeID="N232286459e03460c88c50664fd5d3e44"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncd3b053c263a41a784f9ef4c066631b8">
+    <rdf:first rdf:nodeID="Ne20052a952db4c9a812737bac8b2246d"/>
+    <rdf:rest rdf:nodeID="N3b13175663d24fbb9b84b22d9587c667"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4345fc6bc62c423f9fcf64b318618f49">
+    <rdf:first rdf:nodeID="N08d48ed342fd4383a7a6acbfc646cc59"/>
+    <rdf:rest rdf:nodeID="N0d4c70699af945e5b94cc739a0e87109"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf0ee766f6c3c43fa9a16f0e7ca429808">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#RefractorySufferingSituation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nffc48b2433c448129c6b6ec4a5c51689">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasTreatmentOption"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_opt"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N924bc2900d8a402088103239384ec758">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasClinicalState"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#ClinicalAnalysis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalEntity"/>
+    <rdfs:label xml:lang="es">Análisis clínico</rdfs:label>
+    <rdfs:comment>Categoría que agrupa mediciones de laboratorio, escalas y parámetros fisiológicos de UCI.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#peep_CarlosM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#PEEP"/>
+    <hasBiomarkerValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.0</hasBiomarkerValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3b13175663d24fbb9b84b22d9587c667">
+    <rdf:first rdf:nodeID="N4b9d53f63cea4dbd8765b2a1524ed6af"/>
+    <rdf:rest rdf:nodeID="N5999d743b03d4057a5a1b1aa573b2981"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9f653746efdb4fba99ccbdeaa9819634">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasOrganFailure"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_of1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6ae1247456a9438a8601736aedc3ee08">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Situation_Futility"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb749427774154f48b9655005b6adb6b5">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_harm"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0e7fceb7ea5045ea956ee4db828cced8">
+    <rdf:first rdf:nodeID="N1d7f06d989c64e42af3555cb63674024"/>
+    <rdf:rest rdf:nodeID="N168a17539dec4ddaa237a7d722fc689b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6b6608c3daf349ccae02f1f17c826e5d">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasOrganFailure"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_of3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na29645369fe94c90bab9a7a3729b04c9">
+    <rdf:first rdf:nodeID="N6c26e92960064cae8a4d24025ec7f5dc"/>
+    <rdf:rest rdf:nodeID="Nf7e81bf357084ddf8034ee9979f3bac0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na3e9e80397ce4696b8de1c9b0161a348">
+    <rdf:first rdf:nodeID="N572a51a3c3d440c3a39500fbf18bafbc"/>
+    <rdf:rest rdf:nodeID="N158f0433d9564574ac349c4798351a09"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Neea81dc6024b43959dcbc6b2985651e7">
+    <rdf:first rdf:nodeID="Na283329c5d38413580a7325990fabfc4"/>
+    <rdf:rest rdf:nodeID="N55c6144f6df9415e8bed5a50e06d2853"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N05e893ac67694095a484a6efbfcf9fa3">
+    <rdf:first rdf:nodeID="N844957829756466582d24a4a087cccae"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N88d52f1090144fb98f2abdadd5e56198">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N78e76ea8385146238f5674202f4ec23a">
+    <rdf:first rdf:resource="http://www.w3.org/2003/11/swrlb#now"/>
+    <rdf:rest rdf:nodeID="N93e86328454b4028b60cad51046cfe06"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N05e2843f7c774e489232cd111efe348d">
+    <rdf:first rdf:nodeID="Necee38b11633416da7bfefcc6f21484f"/>
+    <rdf:rest rdf:nodeID="Nb20c46d0c5064c5f8eead665951394f5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5902cb2f2eaf4b44b7dccd57bd39f595">
+    <rdf:first rdf:nodeID="N81654d10933549569e58615155a55de1"/>
+    <rdf:rest rdf:nodeID="N6959844e876241ffad7653775c1d3603"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule1_variable_cs">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N678a250883a64e16b22c8c965b1a63b1">
+    <rdf:first rdf:nodeID="N1148e7f31d4044aa9d2a027a3cfd7bd9"/>
+    <rdf:rest rdf:nodeID="Nf8a6c528e1684f93b667313adf3a599b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N304bf6a2bebf4510b240ac77230f3eef">
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.01</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#LegalValidity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Validez legal de la decisión</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#LegalEntity"/>
+    <rdfs:comment xml:lang="es">Representa si una decisión es legalmente válida en un contexto institucional y jurisdiccional específico (CQ4).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule5_NonMaleficenceViolation">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 5: Detección de violación de no maleficencia</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasTreatmentOption(?p,?opt) ∧ hasRiskOfHarm(?opt,?harm) ∧ hasSeverity(?harm,'high') ∧ hasBenefit(?opt,?ben) ∧ swrlb:lessThan(?ben,?harm) → PrincipleViolation(?conflict)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5117a3f1ac7146bfbc6e358de2404cd3">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_v1"/>
+    <rdf:rest rdf:nodeID="Nc5cf49d1bbf04fba9eb8365c6fc1acca"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N30050c79a7b148279ed1f516ce0b5534">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasClinicalState"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#ClinicalEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Superclase de todas las entidades del dominio clínico.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2b3fb208bedf471ea67ba2e51ec4e506">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#generatesAuditTrail"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_trail"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1d7f06d989c64e42af3555cb63674024">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasGuidelineRecommendation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_rec"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf032c612f4f14613942ef86332276564">
+    <rdf:first rdf:nodeID="N22d2d1260321441398731aab3a6e8bce"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#norepi_CarlosM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#NorepinephrineDose"/>
+    <hasBiomarkerValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.3</hasBiomarkerValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5d4dae3764344058b167636fbe903e09">
+    <rdf:first rdf:nodeID="N566a80e7fdc14389a0c1516c04473518"/>
+    <rdf:rest rdf:nodeID="Ne01f9a3fee304365a6a8eab0c83823a6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1b61634f6704469484299036b4406d11">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasSeverity"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2>high</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc7f93a56a5594673a14583c39ebae4ee">
+    <rdf:first rdf:nodeID="Nddedc0fdaf9b48a48f3726b1e7a34ff0"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nee573ec685cf4e0990b7d4c6121f16ed">
+    <rdf:first rdf:nodeID="Nd2e38328cc6e481ea7e7e50f19e54952"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N230751f4d50c491a9b7094696150606e">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasPatientPreference"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_pref"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N070813376e324903bbd1417d4dd01ee4">
+    <rdf:first rdf:nodeID="N9e889984f9074e4aae59086acd93f3d4"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0f8fd8f11dfd4aeda0c2a88f7563be6d">
+    <rdf:first rdf:nodeID="N67b513b683ce496897a9f7b567d306f3"/>
+    <rdf:rest rdf:nodeID="Nf032c612f4f14613942ef86332276564"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#RequiresReevaluation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#Decision"/>
+    <rdfs:label xml:lang="es">Decisión que requiere reevaluación</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N31508c5714c84b4f8db5406d851833f1">
+    <rdf:first rdf:nodeID="Nd3de4bf5afd24739bb5f79d3db624e85"/>
+    <rdf:rest rdf:nodeID="N110b7e1d4f20488a8207d5743b776714"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndd1c3479cb90487ca165c0d0017b3e97">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_tw"/>
+    <rdf:rest rdf:nodeID="Ncec88681d7e2478fb9543edee7c895f0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N21f722a17856497383fe7bfce7f4d062">
+    <rdf:first rdf:nodeID="N30d45393db874483ac7c5118590c7038"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_attempts">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule16_AuditTrailGeneration">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 16: Generación de traza de auditoría</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasDecisionProcess(?p,?dp) ∧ hasAgent(?dp,?a) ∧ hasTimestamp(?dp,?t) ∧ hasDecision(?dp,?d) → generatesAuditTrail(?dp,?trail)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Biomarker">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalAnalysis"/>
+    <rdfs:label xml:lang="es">Biomarcador</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#lactate_CarlosM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#SerumLactate"/>
+    <hasBiomarkerValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.8</hasBiomarkerValue>
+    <rdfs:comment>3.8 mmol/L</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#ICU_Team">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#HealthcareProfessional"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N199c3943433142f9b2f0e1fbeae08c87">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasConsensusAttempts"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_disagreement"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_attempts"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule1_variable_prob">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#TreatmentOption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalEntity"/>
+    <rdfs:label xml:lang="es">Opción terapéutica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Patient_ICU">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalEntity"/>
+    <rdfs:label xml:lang="es">Paciente UCI</rdfs:label>
+    <rdfs:comment>Paciente ingresado en la Unidad de Cuidados Intensivos.</rdfs:comment>
+    <skos:exactMatch rdf:resource="http://snomed.info/id/116154003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_v1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasSurvivalProbability">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#Prognosis"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdfs:comment>Probabilidad de supervivencia a 30 días, valor entre 0 y 1.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd3de4bf5afd24739bb5f79d3db624e85">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasSeverity"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_disagreement"/>
+    <swrl:argument2>moderate</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasLegalValidity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#LegalValidity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Neb7630ba976b4309a90d35919345987c">
+    <rdf:first rdf:nodeID="N2b3fb208bedf471ea67ba2e51ec4e506"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#bilirubin_CarlosM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#TotalBilirubin"/>
+    <hasBiomarkerValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.1</hasBiomarkerValue>
+    <rdfs:comment>4.1 mg/dL</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N56b7f8d8f50542028ce58623d5ba3b53">
+    <rdf:first rdf:nodeID="N811702664b404e738c8bde8f81e5af54"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N95e96659a1544801adc6bbba24c137bb">
+    <rdf:first rdf:nodeID="Nf32e228cae4d48f3bc4edd580db3be64"/>
+    <rdf:rest rdf:nodeID="N17d93e0438e948cf91430c10c4742bb2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N283afb53990e4ec8b98e252bd2e6f171">
+    <rdf:first rdf:nodeID="N29fdfb57f2b142f4ae03d4e1f527e90b"/>
+    <rdf:rest rdf:nodeID="Ne30a087dda854a3eacecb54e9ea4bdf5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na55eb870ed34452a89e5c039474eccce">
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4c6523fc2dfe4ab7a372c6fa0def1824">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#PrincipleViolation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_conflict"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N28e3fdad974946e2bf91cc488ea320a6">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasTimeWindow"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_tw"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9869fca8ddfb495081897b809b746a91">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasDecisionTime"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_d"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_dt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasTreatmentWindow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#TreatmentOption"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#TreatmentWindow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N32edf49c5dd7417f83169f1f3ea0d8d0">
+    <rdf:first rdf:nodeID="Na96711efdcbe49c6a9a9124a504b5f5a"/>
+    <rdf:rest rdf:nodeID="N2a20ebe282e7435f921f433e5a72c145"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N572a51a3c3d440c3a39500fbf18bafbc">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule10_IntensivePalliativeCare">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 10: Indicación de cuidados paliativos intensivos</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasClinicalState(?p,?cs) ∧ RefractorySufferingSituation(?cs) ∧ hasReversalPotential(?cs,false) → IndicatedPalliativeCare(?p)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4c5023b3c57b46a889de179e6a8c1b6b">
+    <rdf:first rdf:nodeID="N11f86307e30b447e9ed83ba751c37120"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule13_DecisionQualityAssessment">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 13: Evaluación de la calidad de la decisión</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasDecisionProcess(?p,?dp) ∧ hasConsensus(?dp,true) ∧ hasEthicalConsistency(?dp,true) ∧ hasClinicalAlignment(?dp,true) → QualityDecision(?dp)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule9_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 9 (RDF/SWRL): Documentación del proceso de decisión</rdfs:label>
+    <swrl:body rdf:nodeID="N98b5efe3e7f94900bf96950561380f54"/>
+    <swrl:head rdf:nodeID="N21f722a17856497383fe7bfce7f4d062"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N07519873ba954e2ea4c0a57fc6a86ed7">
+    <rdf:first rdf:nodeID="Na2a68c9362ca41dabcd00542b0267537"/>
+    <rdf:rest rdf:nodeID="Nbaea50058faf474298751a7762e4ad8f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#PalliativeCare">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#TreatmentOption"/>
+    <rdfs:label xml:lang="es">Cuidados paliativos</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd2e38328cc6e481ea7e7e50f19e54952">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#LimitTreatment"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_opt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#AdvanceDirective">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#EthicalEntity"/>
+    <rdfs:label xml:lang="es">Directiva anticipada / voluntad anticipada</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N81654d10933549569e58615155a55de1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N85821136a8074dd79fcefce16d55105c">
+    <rdf:first rdf:nodeID="N60e877a20a324db7a3a65dc5e65458ad"/>
+    <rdf:rest rdf:nodeID="Nc7f93a56a5594673a14583c39ebae4ee"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasConsensus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N47ab4cf9fa004b7baf3ad027e2609bff">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasClinicalState"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#ClinicalEthicsCommittee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#EthicsCommittee"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9dab9053b2874e9cacbb8665877a7585">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasSymptomBurden"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_burden"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_of2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Decision_Withdrawal_CarlosM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#Decision_Withdrawal"/>
+    <prov:wasGeneratedBy rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne01f9a3fee304365a6a8eab0c83823a6">
+    <rdf:first rdf:nodeID="N524a5a61d5ae478d8ab841975441dace"/>
+    <rdf:rest rdf:nodeID="N503a72f77b984fab9482cf67c2497274"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb20c46d0c5064c5f8eead665951394f5">
+    <rdf:first rdf:nodeID="Ndbbf384f4f6345b4b9a4de9a3681e706"/>
+    <rdf:rest rdf:nodeID="Na855ad266a7e455eb66873fa41d2e2ae"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0441fe33925344e29152a8bf6f71efc4">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasClinicalState"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na5190c86c3054786a484baeced618fbb">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasClinicalState"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N566a80e7fdc14389a0c1516c04473518">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasDecisionProcess"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfa277a89c44543bebbb210d0a9242244">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_of3"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule20_MediationActivation">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 20: Activación de mediación</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasDisagreementWith(?a1,?a2) ∧ hasSeverity(?disagreement,'moderate') ∧ hasConsensusAttempts(?disagreement,?attempts) ∧ swrlb:greaterThan(?attempts,2) → RequiresMediation(?disagreement)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf32e228cae4d48f3bc4edd580db3be64">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasConsensusDocumentation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_a1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb6dcfd104a7641b495c5a5c9901d3b6a">
+    <rdf:first rdf:nodeID="Nbc9f6656dc7d4954a90d077e91f22144"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Maria">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#FamilyMember"/>
+    <hasDisagreementWith rdf:resource="http://onto-finallife-uti.org/ontology#ICU_Team"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N73d55afda696485e8565b02375c2b639">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasDecision"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_dp"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N200387a566cf49e7a36c1ee65cd23f89">
+    <rdf:first rdf:nodeID="Nbc7526ad7543474ca0a184f634f0a575"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4a507ebc19ca47d59ae443f6171f3244">
+    <rdf:first rdf:nodeID="Nedc37a976fc540ed99d925866db47847"/>
+    <rdf:rest rdf:nodeID="N990fea066d044258ab805af9d2536852"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N199e9abd69bc424ab84ada9b825d69f7">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#ValueConflict"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_conflict"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7d760bc3566a4e69b0cb284fef1eee25">
+    <rdf:first rdf:nodeID="N15fb5990e24a42a0ba0117033de9b7c4"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N503a72f77b984fab9482cf67c2497274">
+    <rdf:first rdf:nodeID="N1b61634f6704469484299036b4406d11"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#RequiresMediation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Requiere mediación</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasStrengthOfRecommendation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Jurisdiction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Jurisdicción</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#LegalEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf48d00ab0ebe44edacce52dea9056bbf">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasOrganFailure"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_of2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1f96ca4536e54c07aa10b075319a8c56">
+    <rdf:first rdf:nodeID="N73d55afda696485e8565b02375c2b639"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc52a0e6f00504b01b40150d4e9df1511">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_attempts"/>
+    <rdf:rest rdf:nodeID="N3a4aa95258c742cd879f998c52a52a77"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne0631e1ccaa3433d96b83bcd8e5175f3">
+    <rdf:first rdf:nodeID="Nf0ee766f6c3c43fa9a16f0e7ca429808"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N123e8c9e8c4f4c0d89b74d2324c449b6">
+    <rdf:first rdf:nodeID="N7f440a6408ea4c51b5c091e40874f5dc"/>
+    <rdf:rest rdf:nodeID="N2d42a83991a44947950aba26b5726097"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#RenalReplacementTherapy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#TreatmentOption"/>
+    <rdfs:label xml:lang="es">Terapia de reemplazo renal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nde743e730a0842cd9e613d311cd2c010">
+    <rdf:first rdf:nodeID="N86391cbdb25c491e9fd93e13e6247faf"/>
+    <rdf:rest rdf:nodeID="N4f254dd357a640b591bf6aa1e7fd97d3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N074758554fae495b87e42cdc89e1d529">
+    <rdf:first rdf:nodeID="N43f37ff3629a4d71bebb121d5bc478c6"/>
+    <rdf:rest rdf:nodeID="N906cec443aea4551ad7d5ddf4a76f555"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_of3">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N690a6302b6c74cb886cd9246f80d79d7">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_prob"/>
+    <rdf:rest rdf:nodeID="N304bf6a2bebf4510b240ac77230f3eef"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nba8f3214c8124e638b918b33cf9b89ad">
+    <rdf:first rdf:nodeID="N0651d9fe180a4499ab01e72411bfe2bc"/>
+    <rdf:rest rdf:nodeID="N32f722a3e98949fb8784a33896e46d83"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5bee7f5581c14109acaf7d6499c545aa">
+    <rdf:first rdf:nodeID="N91c9c8aa7d964f4db98ecd831e4fd7de"/>
+    <rdf:rest rdf:nodeID="N4469384f194942479a0240b63f479ad6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasClinicalState">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalState"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#governedByPolicy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#InstitutionalPolicy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasBenefit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N134efdb54dfe486591cebf2153b18a90">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#RequiresMediation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_disagreement"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N23dbbd8764814404bda18430ab4beeb8">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasDisagreementWith"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_a1"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_a2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#EthicsCommitteeMember">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Miembro del comité de ética</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#Agent"/>
+    <rdfs:comment xml:lang="es">Superclase de Bioethicist, Chaplain y PatientAdvocate cuando actúan en el comité.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N79b57d18772b408891bb1d047a730e27">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#MultipleOrganFailureSituation"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3ca4d85da5be41d3817299afc8b4c834">
+    <rdf:first rdf:nodeID="Nbf7f93e3b94c40c6828841cae25cbe8c"/>
+    <rdf:rest rdf:nodeID="N1f96ca4536e54c07aa10b075319a8c56"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0392b60708334036b9d08488faadfa57">
+    <rdf:first rdf:nodeID="N075f4f2482454d718ca71cf4e4f124f5"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_pref">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc18850ce998f499597eaa96318d4b986">
+    <rdf:first rdf:nodeID="N09e6caec9b694c52a1d984ebd07272b6"/>
+    <rdf:rest rdf:nodeID="Nba8f3214c8124e638b918b33cf9b89ad"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasPatientPreference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#PatientValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc6e9b044112f4b32a396bbd271f2fae7">
+    <rdf:first rdf:nodeID="N23dbbd8764814404bda18430ab4beeb8"/>
+    <rdf:rest rdf:nodeID="N31508c5714c84b4f8db5406d851833f1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_dp">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5999d743b03d4057a5a1b1aa573b2981">
+    <rdf:first rdf:nodeID="N2805b9e4c31a4d3983913c868ff03751"/>
+    <rdf:rest rdf:nodeID="N75e6877870a04d9181b54e3a2f14d82a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7f2291034adb43d0bcde5a32d63852ca">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#expressesValue"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_a1"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_v1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Necee38b11633416da7bfefcc6f21484f">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#hasValue"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_conflict"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_v2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_a2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasAnalysis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalAnalysis"/>
+    <rdfs:label xml:lang="es">tiene análisis clínico</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#measuredAt">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#ClinicalAnalysis"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#HealthcareProfessional">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_dt">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule11_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 11 (RDF/SWRL): Limitación específica del tratamiento</rdfs:label>
+    <swrl:body rdf:nodeID="Nde743e730a0842cd9e613d311cd2c010"/>
+    <swrl:head rdf:nodeID="Nee573ec685cf4e0990b7d4c6121f16ed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Non_Suffering">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://onto-finallife-uti.org/ontology#PatientValue"/>
+    <rdfs:label xml:lang="es">No sufrimiento</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne7172efc8f524f71a0687bdf5fcc26e9">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://onto-finallife-uti.org/ontology#compatibleWith"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_v"/>
+    <swrl:argument2 rdf:resource="http://onto-finallife-uti.org/ontology#var_cs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasTreatmentOption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#TreatmentOption"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule12_ComfortMeasuresRecommendation">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 12: Recomendación de medidas de confort</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ IndicatedPalliativeCare(?p) ∧ hasSymptomBurden(?p,?burden) ∧ swrlb:greaterThan(?burden,5) → RecommendComfortMeasures(?p)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc339f7b3ce954baeaa32d221dcddb10a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+    <swrl:arguments rdf:nodeID="N55f4b48bbe6144bda03e8c30c41fad0b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncc2acc0e511942a982fa596d7aa54d67">
+    <rdf:first rdf:nodeID="Ne861dbd98482486db90d8ee8a07a06a4"/>
+    <rdf:rest rdf:nodeID="N074758554fae495b87e42cdc89e1d529"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb0373c542c35454f9ad77dcbed0cd5ad">
+    <rdf:first rdf:nodeID="Ne9e4ab92fa5a427d93efe8491c564665"/>
+    <rdf:rest rdf:nodeID="N070813376e324903bbd1417d4dd01ee4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb22927a0a2124ce8ac3f0da2ca3c8fa5">
+    <rdf:first rdf:nodeID="Nb5900c6fcdce4902992ef98e225bbcf7"/>
+    <rdf:rest rdf:nodeID="N514533d301f143d49ea70260fe59cebd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Guardianship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Tutela / representación legal</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#LegalEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasProbabilitySurvival">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#TreatmentOption"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3d425f286e784c88859a5614ff47fdcd">
+    <rdf:first rdf:nodeID="Nffc48b2433c448129c6b6ec4a5c51689"/>
+    <rdf:rest rdf:nodeID="Nc68221559b8e4d1e86a5c625e4942265"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N811702664b404e738c8bde8f81e5af54">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#PrioritizeValue"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_v1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule6_OptionValueCompatibility">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 6: Compatibilidad opción-valor</rdfs:label>
+    <rdfs:comment>Patient_ICU(?p) ∧ hasAdvanceDirective(?p,?ad) ∧ expressesPreference(?ad,?val) ∧ hasTreatmentOption(?p,?opt) ∧ compatibleWith(?opt,?val) → ValuesAlignedOption(?opt)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5d79a779208f45c98703acad02d13c10">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N998aae387e3b4208bf6e4c339c67665d">
+    <rdf:first rdf:nodeID="Ndbdbd347993a4c29900f0fe20550fd13"/>
+    <rdf:rest rdf:nodeID="N95e96659a1544801adc6bbba24c137bb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N29fdfb57f2b142f4ae03d4e1f527e90b">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N17d93e0438e948cf91430c10c4742bb2">
+    <rdf:first rdf:nodeID="N3ea2ec4659c1473cb4eeab88e4606b74"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4706031293704127a264c35cca3265b0">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nebe547b421444e9aa775c7148fc1f405">
+    <rdf:first rdf:nodeID="N4c6523fc2dfe4ab7a372c6fa0def1824"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_of1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#CompleteDocumentation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Documentación completa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na8c4758586cc4392bf30a5a0d19adce9">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+    <swrl:arguments rdf:nodeID="Ndd1c3479cb90487ca165c0d0017b3e97"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_elapsed">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#InvasiveMechanicalVentilation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#TreatmentOption"/>
+    <rdfs:label xml:lang="es">Ventilación mecánica invasiva</rdfs:label>
+    <skos:exactMatch rdf:resource="http://snomed.info/id/40617009"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd28ada7ef71a4091908081b2f5268594">
+    <rdf:first rdf:nodeID="N29e707d5b53a46ad9e1d1acec88ea710"/>
+    <rdf:rest rdf:nodeID="Ndce2ed7aa9ce4bb89e5b5ecb050aae24"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N13a5206a512145e3a20f6e69067c369c">
+    <rdf:first rdf:nodeID="N37cf4b485a9644fbba7c14055f3c039d"/>
+    <rdf:rest rdf:nodeID="N14673829889f49c78233aa492a0499f8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne30a087dda854a3eacecb54e9ea4bdf5">
+    <rdf:first rdf:nodeID="Na5190c86c3054786a484baeced618fbb"/>
+    <rdf:rest rdf:nodeID="N43bbb9af190b4379b3115735f61365e8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncce6bf8763044402a2756ecf43aeb7f1">
+    <rdf:first rdf:nodeID="Na22c8d28e9cc4d8889dc19cdd2e062ff"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#RespiratoryTherapist">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Terapeuta respiratorio</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://onto-finallife-uti.org/ontology#HealthcareProfessional"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasPriority">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0075e4d194de4231b8d2a61fc3c315fb">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_rec">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne888042ffa464e1d9c3f7bdf8c4c86ed">
+    <rdf:first rdf:nodeID="N6b6608c3daf349ccae02f1f17c826e5d"/>
+    <rdf:rest rdf:nodeID="Nb22927a0a2124ce8ac3f0da2ca3c8fa5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N872014ad45d74095842b69dce0cab78a">
+    <rdf:first rdf:nodeID="N073b58a4e02349d9b9357c8398b83b94"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N42d81d0aff984b10af19417d692240ad">
+    <rdf:first rdf:nodeID="N0441fe33925344e29152a8bf6f71efc4"/>
+    <rdf:rest rdf:nodeID="N7bf1adc2ca764945a31395fe4006e06c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc86d9f76a4ef4f80b4f676280785aab7">
+    <rdf:first rdf:nodeID="N6ae1247456a9438a8601736aedc3ee08"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N86391cbdb25c491e9fd93e13e6247faf">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_agent">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nca525cbb392a44b59d41018262f037a4">
+    <rdf:first rdf:resource="http://onto-finallife-uti.org/ontology#var_ben"/>
+    <rdf:rest rdf:nodeID="Nb749427774154f48b9655005b6adb6b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_v">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_ad">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_disagreement">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_trail">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule10_SWRL">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <rdfs:label xml:lang="es">Regla 10 (RDF/SWRL): Indicación de cuidados paliativos intensivos</rdfs:label>
+    <swrl:body rdf:nodeID="N8ae2bcf292964d5d9c171118cdd8341f"/>
+    <swrl:head rdf:nodeID="N8cdb30aa06d04adda37176881d9c987f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N388c72c6a6d34cf582125421a290b1ae">
+    <rdf:first rdf:nodeID="N9869fca8ddfb495081897b809b746a91"/>
+    <rdf:rest rdf:nodeID="N356c807c32a740ff85556171cbf7eace"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na855ad266a7e455eb66873fa41d2e2ae">
+    <rdf:first rdf:nodeID="Neef37a177bce464ca482172dd17803bc"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7bf1adc2ca764945a31395fe4006e06c">
+    <rdf:first rdf:nodeID="Ne7172efc8f524f71a0687bdf5fcc26e9"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N14673829889f49c78233aa492a0499f8">
+    <rdf:first rdf:nodeID="N230751f4d50c491a9b7094696150606e"/>
+    <rdf:rest rdf:nodeID="N42d81d0aff984b10af19417d692240ad"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#compatibleWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>Relaciona una opción terapéutica con un valor del paciente.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N43bbb9af190b4379b3115735f61365e8">
+    <rdf:first rdf:nodeID="Nb072a06d67e54f44a17eed0d07858ad2"/>
+    <rdf:rest rdf:nodeID="N0e7fceb7ea5045ea956ee4db828cced8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0d4c70699af945e5b94cc739a0e87109">
+    <rdf:first rdf:nodeID="Nc339f7b3ce954baeaa32d221dcddb10a"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_opt">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd8f1eb49d4584b19bccf656acfaa6d6c">
+    <rdf:first rdf:nodeID="Nd3a92861615346099376cdd36cec4964"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_pr">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasRiskOfHarm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb4b1b321b4c94f938364d4c760f57178">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://onto-finallife-uti.org/ontology#Patient_ICU"/>
+    <swrl:argument1 rdf:resource="http://onto-finallife-uti.org/ontology#var_p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#incompatibleWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N55d5fb78110f454ab4e71c2fcf99df69">
+    <rdf:first rdf:nodeID="N7020fd39858541a6b913198d0326887d"/>
+    <rdf:rest rdf:nodeID="N123e8c9e8c4f4c0d89b74d2324c449b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#documentedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#Decision"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#hasAgent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://onto-finallife-uti.org/ontology#DecisionProcess"/>
+    <rdfs:range rdf:resource="http://onto-finallife-uti.org/ontology#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#Rule1_variable_pr">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_cs">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8ae2bcf292964d5d9c171118cdd8341f">
+    <rdf:first rdf:nodeID="N4706031293704127a264c35cca3265b0"/>
+    <rdf:rest rdf:nodeID="N4a507ebc19ca47d59ae443f6171f3244"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://onto-finallife-uti.org/ontology#var_t">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+</rdf:RDF>
