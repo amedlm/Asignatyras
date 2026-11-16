@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Ejemplo de metadatos Dublin Core (DC Simple + Qualified) en RDF/XML.
+  Recurso descrito: el propio repositorio github.com/uclv-cinfo/analisis-documental
+  Pensado para uso docente en la unidad U5 y la práctica P2-DUBLINCORE.
+-->
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dctype="http://purl.org/dc/dcmitype/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <rdf:Description rdf:about="https://github.com/uclv-cinfo/analisis-documental">
+
+    <!-- 1. Title -->
+    <dc:title>Análisis Documental I — Programa de Formación Continua (UCLV)</dc:title>
+    <dcterms:alternative>Repositorio docente de Análisis Documental I</dcterms:alternative>
+
+    <!-- 2. Creator -->
+    <dc:creator>Leiva-Mederos, Amed</dc:creator>
+    <dcterms:creator rdf:resource="https://orcid.org/0009-0001-5050-5563"/>
+
+    <!-- 3. Subject -->
+    <dc:subject>Catalogación</dc:subject>
+    <dc:subject>MARC 21</dc:subject>
+    <dc:subject>Dublin Core</dc:subject>
+    <dc:subject>Análisis documental</dc:subject>
+    <dc:subject>Bibliotecología</dc:subject>
+    <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85019192"/>
+
+    <!-- 4. Description -->
+    <dc:description>Materiales docentes de la asignatura Análisis Documental I,
+      impartida desde 2012 en el Departamento de Ciencias de la Información de
+      la UCLV, dentro del Programa de Formación Continua. Forma en análisis
+      formal y de contenido, control de autoridades y uso de lenguajes
+      documentales, con énfasis en MARC 21, Dublin Core y MODS.</dc:description>
+    <dcterms:abstract>Materiales docentes de Análisis Documental I, UCLV, 2012-2026.</dcterms:abstract>
+    <dcterms:tableOfContents rdf:resource="https://github.com/uclv-cinfo/analisis-documental#contenidos"/>
+
+    <!-- 5. Publisher -->
+    <dc:publisher>Universidad Central «Marta Abreu» de Las Villas. Departamento de Ciencias de la Información</dc:publisher>
+
+    <!-- 6. Contributor -->
+    <dc:contributor>Equipo docente UCLV-CInfo</dc:contributor>
+
+    <!-- 7. Date -->
+    <dc:date>2026-11-10</dc:date>
+    <dcterms:created>2012-02-08</dcterms:created>
+    <dcterms:modified>2026-11-10</dcterms:modified>
+    <dcterms:issued>2026-11-10</dcterms:issued>
+
+    <!-- 8. Type -->
+    <dc:type>LearningObject</dc:type>
+    <dcterms:type rdf:resource="http://purl.org/dc/dcmitype/Text"/>
+    <dcterms:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+
+    <!-- 9. Format -->
+    <dc:format>text/markdown</dc:format>
+    <dc:format>application/pdf</dc:format>
+    <dc:format>application/xml</dc:format>
+    <dcterms:medium rdf:resource="http://rdaregistry.info/termList/RDAMediaType/1003"/>
+
+    <!-- 10. Identifier -->
+    <dc:identifier>https://github.com/uclv-cinfo/analisis-documental</dc:identifier>
+    <dcterms:identifier>DOI:10.5281/zenodo.example</dcterms:identifier>
+
+    <!-- 11. Source -->
+    <dc:source>Materiales previos en aula virtual Moodle de la UCLV</dc:source>
+
+    <!-- 12. Language -->
+    <dc:language>spa</dc:language>
+    <dcterms:language rdf:resource="http://id.loc.gov/vocabulary/iso639-2/spa"/>
+
+    <!-- 13. Relation -->
+    <dc:relation rdf:resource="https://github.com/uclv-cinfo/web-semantica"/>
+    <dcterms:isPartOf rdf:resource="https://www.uclv.cu/programa-formacion-continua"/>
+    <dcterms:hasVersion rdf:resource="https://github.com/uclv-cinfo/analisis-documental/releases"/>
+
+    <!-- 14. Coverage -->
+    <dc:coverage>Santa Clara, Cuba</dc:coverage>
+    <dc:coverage>2012-2026</dc:coverage>
+    <dcterms:spatial rdf:resource="http://sws.geonames.org/3538116/"/>
+    <dcterms:temporal>2012/2026</dcterms:temporal>
+
+    <!-- 15. Rights -->
+    <dc:rights>Licencia Creative Commons Atribución-CompartirIgual 4.0
+      Internacional (CC BY-SA 4.0). https://creativecommons.org/licenses/by-sa/4.0/</dc:rights>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+    <dcterms:accessRights rdf:resource="http://purl.org/eprint/accessRights/OpenAccess"/>
+
+  </rdf:Description>
+</rdf:RDF>
