@@ -1,0 +1,82 @@
+# === Consulta 1: Personas nacidas en La Habana con artículo en Wikipedia ===
+# La Habana (wd:Q1563)
+
+SELECT ?persona ?personaLabel ?fechaNac ?ocupacionLabel
+WHERE {
+  ?persona wdt:P19 wd:Q1563 ;              # lugar de nacimiento: La Habana
+           wdt:P106 ?ocupacion .           # ocupación
+  OPTIONAL { ?persona wdt:P569 ?fechaNac . }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". }
+}
+ORDER BY DESC(?fechaNac)
+LIMIT 50
+
+# === Consulta 2: Obras literarias de autores nacidos en Santa Clara, Cuba ===
+# Santa Clara (wd:Q132728)
+
+SELECT ?obra ?obraLabel ?autorLabel ?anio
+WHERE {
+  ?autor wdt:P19 wd:Q132728 .              # nacido en Santa Clara
+  ?obra wdt:P50 ?autor ;                   # autor
+        wdt:P577 ?fechaPub .
+  BIND(YEAR(?fechaPub) AS ?anio)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". }
+}
+ORDER BY DESC(?anio)
+
+# === Consulta 3: Universidades en Cuba (Q241) con número de estudiantes ===
+# Universidades cubanas con datos en DBpedia.
+
+SELECT ?uni ?uniLabel ?numEstudiantes ?sitioWeb
+WHERE {
+  ?uni a dbo:University ;
+       dbo:country <http://dbpedia.org/resource/Cuba> .
+  OPTIONAL { ?uni dbo:numberOfStudents ?numEstudiantes . }
+  OPTIONAL { ?uni foaf:homepage ?sitioWeb . }
+  FILTER(LANG(?uniLabel) = "es" || LANG(?uniLabel) = "en")
+}
+ORDER BY DESC(?numEstudiantes)
+
+# === Consulta 4: Libros publicados por Editorial UCLV o equivalentes cubanas ===
+# UCLV = wd:Q2249525 (si existe entrada en Wikidata), ajustar si no.
+
+SELECT ?libro ?libroLabel ?autorLabel ?anio
+WHERE {
+  ?libro dct:publisher ?publisher ;
+         dct:creator ?autor ;
+         dct:issued ?anio .
+  FILTER(CONTAINS(STR(?publisher), "Universidad Central") ||
+         CONTAINS(STR(?publisher), "UCLV"))
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". }
+}
+ORDER BY DESC(?anio)
+LIMIT 50
+
+# === Consulta 5: Personas con ORCID y afiliación a universidad cubana ===
+
+PREFIX orcid: <https://orcid.org/>
+
+SELECT ?persona ?personaLabel ?orcid ?afiliacionLabel
+WHERE {
+  ?persona wdt:P496 ?orcid ;               # ORCID
+           wdt:P1416 ?afiliacion .         # afiliación académica
+  ?afiliacion wdt:P17 wd:Q241 .            # afiliación en Cuba
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". }
+}
+ORDER BY ?afiliacionLabel
+
+# === Consulta 6: Autores de lengua materna español con premio Nobel ===
+
+SELECT ?autor ?autorLabel ?premioLabel ?anio
+WHERE {
+  ?autor wdt:P407 wd:Q1321 ;               # obra original en español
+         wdt:P166 ?premio .                # recibió premio
+  VALUES ?premio {
+    wd:Q37922    # Nobel de Literatura
+    wd:Q41285    # Premio Cervantes
+  }
+  OPTIONAL { ?autor wdt:P585 ?fecha . }
+  BIND(YEAR(?fecha) AS ?anio)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". }
+}
+ORDER BY DESC(?anio)

@@ -1,46 +1,44 @@
-# Glosario — Análisis Documental I (UCLV)
+# Glosario — Web Semántica (UCLV)
 
 Términos clave del curso, en orden alfabético. Definiciones cortas orientadas
 al estudiante; para tratamiento profundo ver la bibliografía.
 
 | Término | Definición breve |
 |---|---|
-| **ABCD** | Automatización de Bibliotecas y Centros de Documentación, software libre de BIREME/OPS. |
-| **Access point** | Punto de acceso en un catálogo (autor, título, materia). |
-| **Authority control** | Ver **Control de autoridades**. |
-| **Catalogación descriptiva** | Descripción formal del documento según ISBD/RDA. |
-| **Catalogación por materia** | Asignación de materias a un documento (indización catalográfica). |
-| **CDU** | Clasificación Decimal Universal. |
-| **CompMARC** | Herramienta del responsable (Leiva-Mederos) para medir completitud MARC 21. |
-| **Concepto clave** | Idea central de un documento, candidato a descriptor. |
-| **Control de autoridades** | Conjunto de procedimientos para uniformizar las formas autorizadas de nombres y temas. |
-| **Descriptor** | Término preferido en un tesauro documental. |
-| **Dublin Core** | Conjunto de 15 elementos básicos de metadatos (DCMI). |
-| **Encabezamiento de materia** | Forma autorizada de un tema para indización en catálogo. |
-| **ExactMatch** | Equivalencia exacta entre conceptos SKOS de distintos esquemas. |
-| **FRAD** | Functional Requirements for Authority Data (IFLA). |
-| **FRBR** | Functional Requirements for Bibliographic Records (IFLA). |
-| **Gold standard** | Indización de referencia elaborada por expertos. |
-| **ISBD** | International Standard Bibliographic Description (IFLA). |
-| **ISBN** | International Standard Book Number, identificador de monografías. |
-| **ISSN** | International Standard Serial Number, identificador de publicaciones seriadas. |
-| **Indización** | Asignación de términos de materia a un documento. |
-| **Indización libre** | Asignación de términos sin control de vocabulario. |
-| **Indización controlada** | Asignación de términos tomados de un tesauro o lista. |
-| **Leader** | Primeros 24 caracteres del registro MARC 21 (control). |
-| **LCSH** | Library of Congress Subject Headings, lista de encabezamientos del LC. |
-| **MARC 21** | Machine-Readable Cataloging, formato del LC. |
-| **MARCXML** | Serialización XML de MARC 21. |
-| **Materia** | Tema principal de un documento. |
-| **Metadato** | Dato sobre un dato (autor, título, fecha, idioma...). |
-| **MODS** | Metadata Object Description Schema, esquema del LC basado en MARC. |
-| **No descriptor** | Sinónimo que remite al descriptor (USE). |
-| **RDA** | Resource Description and Access, sucesor de AACR2. |
-| **Resumen informativo** | Resumen de 100-150 palabras que recoge hallazgos clave. |
-| **Resumen indicativo** | Resumen de 30-50 palabras que indica la estructura del documento. |
-| **Signatura topográfica** | Código que ubica físicamente el documento en la estantería. |
+| **Blank node** | Nodo anónimo, sin URI, sintaxis Turtle `_:x` o `[ ... ]`. |
+| **Clase** | Conjunto de individuos (`owl:Class` o `rdfs:Class`). |
+| **ConceptScheme** | Conjunto ordenado de conceptos SKOS (`skos:ConceptScheme`). |
+| **CONSTRUCT** | Forma SPARQL que devuelve tripletas nuevas en lugar de filas. |
+| **DatatypeProperty** | Propiedad OWL cuyo rango es un literal (`xsd:string`, `xsd:integer`). |
+| **Dereferenciación** | Resolver una URI HTTP y obtener una representación del recurso. |
+| **Endpoint SPARQL** | Servicio HTTP que recibe consultas SPARQL y devuelve resultados. |
+| **FOAF** | Friend-of-a-Friend, vocabulario para personas y redes sociales. |
+| **Fuseki** | Servidor SPARQL de Apache Jena. |
+| **HermiT** | Razonador OWL de código abierto. |
+| **Individuo** | Instancia concreta de una clase (`owl:NamedIndividual`). |
+| **ISNI** | Identificador persistente de entidades creativas (16 dígitos). |
+| **Linked Data** | Conjunto de principios para publicar datos enlazados en la Web. |
+| **Literal** | Valor (cadena, número, fecha) en una tripleta RDF. |
+| **Namespace** | Prefijo corto para una URI base (`dc:` para Dublin Core). |
+| **ObjectProperty** | Propiedad OWL cuyo rango es otra entidad (no literal). |
+| **Ontología** | Modelo formal de un dominio, expresado en RDFS u OWL. |
+| **ORCID** | Identificador persistente de investigadores. |
+| **Owl:sameAs** | Declaración de que dos URIs identifican el mismo recurso. |
+| **PrefLabel** | Etiqueta preferida de un concepto SKOS. |
+| **Protégé** | Editor visual de ontologías OWL (Stanford). |
+| **RDF** | Resource Description Framework, modelo de tripletas del W3C. |
+| **RDFS** | RDF Schema, vocabulario básico para clasificación y subpropiedades. |
+| **Razonador** | Programa que infiere tripletas implícitas (HermiT, Pellet). |
+| **Restricción** | Condición sobre los valores de una propiedad (`owl:Restriction`). |
+| **robot** | Herramienta de referencia del W3C para validar y razonar OWL. |
+| **Schema.org** | Vocabulario patrocinado por Google/Bing/Yandex para datos en la Web. |
+| **SERVICE** | Cláusula SPARQL para consultar endpoint remoto dentro de la consulta. |
 | **SKOS** | Simple Knowledge Organization System, estándar W3C para tesauros. |
-| **Subcampo** | Unidad dentro de un campo MARC 21, prefijada con `$` (`$a`, `$b`). |
-| **Tesauro** | Lenguaje documental con descriptores y relaciones jerárquicas/associativas. |
-| **UNIMARC** | Formo MARC de la IFLA, alternativa al MARC 21 del LC. |
-| **VIAF** | Virtual International Authority File, agregador internacional de autoridades. |
+| **SPARQL** | Lenguaje de consulta para RDF (SPARQL Protocol and RDF Query Language). |
+| **Triple pattern** | Patrón `?s ?p ?o` que coincide con tripletas del dataset. |
+| **Tripleta** | Aserción (sujeto, predicado, objeto). |
+| **Turtle** | Serialización textual de RDF, sintaxis compacta. |
+| **URI** | Identificador uniforme de recursos (URL o URN). |
+| **VIAF** | Virtual International Authority File, autoridades de autores. |
+| **VIVO** | Ontología para representar investigadores, publicaciones, premios. |
+| **Wikidata** | Base de conocimiento libre y colaborativa alojada por Wikimedia. |

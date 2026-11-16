@@ -1,0 +1,102 @@
+# === Consulta 1: Autores cubanos con entrada en Wikidata ===
+# Devuelve personas con ocupación "escritor" (Q36180) o "poeta" (Q49757)
+# y país de ciudadanía Cuba (Q241).
+
+SELECT ?autor ?autorLabel ?ocupacionLabel
+WHERE {
+  ?autor wdt:P27 wd:Q241 ;              # país de ciudadanía: Cuba
+         wdt:P106 ?ocupacion .           # ocupación
+  VALUES ?ocupacion { wd:Q36180 wd:Q49757 wd:Q48537 wd:Q214917 }  # escritor/poeta/novelista/dramaturgo
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". }
+}
+ORDER BY ?autorLabel
+LIMIT 50
+
+# === Consulta 2: Obras de Gabriel García Márquez traducidas al español ===
+# Gabriel García Márquez = wd:Q5858
+
+SELECT ?obra ?obraLabel ?anioPublicacion ?idiomaOriginalLabel
+WHERE {
+  ?obra wdt:P50 wd:Q5858 ;                 # autor: García Márquez
+        wdt:P407 ?idiomaOriginal ;         # idioma de la obra original
+        wdt:P577 ?anioPublicacion .        # fecha de publicación
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". }
+}
+ORDER BY DESC(?anioPublicacion)
+LIMIT 30
+
+# === Consulta 3: Premios Cervantes — galardonados por año y país ===
+# Premio Cervantes = wd:Q37950201
+
+SELECT ?ganador ?ganadorLabel ?anio ?paisLabel
+WHERE {
+  ?ganador wdt:P166 wd:Q37950201 ;         # recibió: Premio Cervantes
+          wdt:P27 ?pais .                  # país de ciudadanía
+  OPTIONAL { ?ganador wdt:P585 ?fecha . }  # fecha del galardón
+  BIND(YEAR(?fecha) AS ?anio)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". }
+}
+ORDER BY DESC(?anio)
+
+# === Consulta 4: Bibliotecas nacionales del mundo con coordenadas ===
+# Biblioteca nacional = wd:Q856276
+
+SELECT ?biblioteca ?bibliotecaLabel ?paisLabel ?coordenadas ?sitioWeb
+WHERE {
+  ?biblioteca wdt:P31 wd:Q856276 ;         # instancia de: biblioteca nacional
+              wdt:P17 ?pais ;              # país
+              wdt:P625 ?coordenadas .      # coordenadas geográficas
+  OPTIONAL { ?biblioteca wdt:P856 ?sitioWeb . }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". }
+}
+ORDER BY ?paisLabel
+
+# === Consulta 5: Universidades iberoamericanas (España + América Latina) ===
+# con identificador ORCID institucional
+
+SELECT ?uni ?uniLabel ?paisLabel ?orcidInstitucional
+WHERE {
+  ?uni wdt:P31 wd:Q3918 ;                  # instancia de: universidad
+       wdt:P17 ?pais .
+  VALUES ?pais {
+    wd:Q29    # España
+    wd:Q155   # Brasil
+    wd:Q148   # Chile
+    wd:Q739   # Colombia
+    wd:Q800   # Costa Rica
+    wd:Q241   # Cuba
+    wd:Q792   # El Salvador
+    wd:Q774   # Guatemala
+    wd:Q783   # Honduras
+    wd:Q96    # México
+    wd:Q811   # Nicaragua
+    wd:Q804   # Panamá
+    wd:Q733   # Paraguay
+    wd:Q419   # Perú
+    wd:Q928   # Filipinas
+    wd:Q668   # Portugal
+    wd:Q717   # Venezuela
+    wd:Q750   # Bolivia
+    wd:Q414   # Argentina
+    wd:Q733   # Ecuador
+  }
+  OPTIONAL { ?uni wdt:P496 ?orcidInstitucional . }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". }
+}
+ORDER BY ?paisLabel ?uniLabel
+LIMIT 200
+
+# === Consulta 6: Top-20 autores más traducidos del español al inglés ===
+
+SELECT ?autor ?autorLabel (COUNT(?traduccion) AS ?numTraducciones)
+WHERE {
+  ?obra wdt:P50 ?autor ;
+        wdt:P407 wd:Q1321 .                # obra original en español
+  ?traduccion wdt:P629 ?obra ;             # traducción de
+              wdt:P407 wd:Q1860 .          # traducción al inglés
+  ?autor wdt:P27 wd:Q29 .                  # autor español (modificar a otros países)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". }
+}
+GROUP BY ?autor ?autorLabel
+ORDER BY DESC(?numTraducciones)
+LIMIT 20

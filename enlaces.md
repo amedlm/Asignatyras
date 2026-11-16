@@ -1,64 +1,69 @@
-# Enlaces — Análisis Documental I (UCLV)
+# Enlaces — Web Semántica (UCLV)
 
 Recursos externos de referencia, organizados por temática. Mantenido por el
 equipo docente; enviar PR para añadir nuevos enlaces.
 
-## Normas y marcos catalográficos
+## Estándares del W3C
 
-- [ISBD (IFLA)](https://www.ifla.org/isbd)
-- [MARC 21 Bibliographic (LC)](https://www.loc.gov/marc/bibliographic/)
-- [MARC 21 Authority (LC)](https://www.loc.gov/marc/authority/)
-- [RDA Steering Committee](https://www.rda-rsc.org/)
-- [Dublin Core Metadata Initiative](https://www.dublincore.org/)
-- [MODS (LC)](https://www.loc.gov/standards/mods/)
-- [ISO 214 — Abstracts](https://www.iso.org/standard/3775.html)
-- [BNE — Catálogo](http://catalogo.bne.es/)
+- [RDF 1.1 Concepts and Abstract Syntax](https://www.w3.org/TR/rdf11-concepts/)
+- [RDF 1.1 Turtle](https://www.w3.org/TR/turtle/)
+- [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/)
+- [OWL 2 Document Overview](https://www.w3.org/TR/owl2-overview/)
+- [SKOS Reference](https://www.w3.org/TR/skos-reference/)
+- [Linked Data Best Practices](https://www.w3.org/TR/ld-bp/)
+- [JSON-LD Playground](https://json-ld.org/playground/)
 
 ## Herramientas
 
-- [PyMARC](https://pypi.org/project/pymarc/) — Python library para MARC 21
-- [marcedit](https://marcedit.reeset.net/) — Editor visual de MARC 21
-- [ABCD (BIREME/OPS)](https://abcd.bireme.org/) — Sistema integrado de gestión bibliotecaria
-- [Koha](https://koha-community.org/) — ILS de código abierto
-- [OpenRefine](https://openrefine.org/) — Limpieza de metadatos
-- [CompMARC (referencia)](../herramientas/compmarc/) — Medición de completitud MARC 21
+- [Protégé](https://protege.stanford.edu/) — Editor de ontologías OWL
+- [Apache Jena Fuseki](https://jena.apache.org/documentation/fuseki2/) — Endpoint SPARQL
+- [robot (W3C OWL toolchain)](https://robot.obolibrary.org/) — Validación OWL
+- [HermiT Reasoner](https://www.hermit-reasoner.com/)
+- [rdflib (Python)](https://rdflib.readthedocs.io/)
+- [RDF Translator](https://rdf-translator.appspot.com/)
+- [EasyRDF](https://www.easyrdf.org/)
+- [OpenLink Virtuoso](https://virtuoso.openlinksw.com/)
 
-## Autoridades y vocabularios
+## Endpoints SPARQL públicos
 
-- [VIAF — Virtual International Authority File](https://viaf.org/)
-- [Library of Congress Authorities](https://authorities.loc.gov/)
-- [LCSH (LC Subject Headings)](https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html)
-- [Tesauro UNESCO](http://vocabularies.unesco.org/)
-- [GeoNames](https://www.geonames.org/) — Lugares
-- [ORCID](https://orcid.org/) — Investigadores
-- [ISNI](https://isni.org/) — Identificadores de entidades creativas
+- [Wikidata Query Service](https://query.wikidata.org/)
+- [DBpedia SPARQL](https://dbpedia.org/sparql)
+- [VIAF](https://viaf.org/)
+- [ORCID](https://orcid.org/)
+- [Linked Open Vocabularies (LOV)](https://lov.linkeddata.es/)
 
-## Repositorios y catálogos
+## Vocabularios y ontologías
 
-- [Catálogo BNE](http://catalogo.bne.es/)
-- [WorldCat (OCLC)](https://www.worldcat.org/)
-- [Dialnet](https://dialnet.unirioja.es/)
-- [SciELO Cuba](http://scielo.sld.cu/)
-- [Repositorio Institucional UCLV] (pendiente de URL)
+- [Dublin Core](https://www.dublincore.org/)
+- [FOAF](http://xmlns.com/foaf/spec/)
+- [Schema.org](https://schema.org/)
+- [SKOS](https://www.w3.org/2004/02/skos/)
+- [VIVO](https://vivoweb.org/)
+- [BIBFRAME](https://www.loc.gov/bibframe/)
+- [FAIR vocabularies](https://fairsharing.org/)
 
-## Comunidades y eventos
+## Listas «Awesome»
 
-- [IFLA](https://www.ifla.org/) — International Federation of Library Associations
-- [ABEC](http://www.abec.org/) — Asociación de Bibliotecas de Enseñanza Cubanas
-- [Biblioteca Nacional de Cuba José Martí](http://www.bnjm.cu/)
-- [El Profesional de la Información](https://elprofesionaldelainformacion.com/)
-- [Revista Cubana de Información en Ciencias de la Salud](http://www.rcics.sld.cu/)
-
-## Recursos en español
-
-- [Tesauros y lenguajes documentales — López-Huertas](https://www.trea.es/)
-- [Resumen documental — Pinto Molina](https://www.trea.es/)
-- [Catalogación — Marcos de Cabezón](https://www.trea.es/)
-- [Manual de catalogación (BNE)](https://www.bne.es/es/colaboracion/manual-catalogacion)
+- [Awesome Semantic Web](https://github.com/semantalytics/awesome-semantic-web)
+- [Awesome Linked Data](https://github.com/sebsto/awesome-linked-data)
+- [Awesome RDF](https://github.com/nikitavoloboev/awesome-rdf)
 
 ## Producción del responsable (UCLV)
 
 - [ORCID de Amed Leiva-Mederos](https://orcid.org/0009-0001-5050-5563)
-- [Authoris — control de autoridades semántico (referencia)](https://github.com/uclv-cinfo/web-semantica)
-- [CompMARC — completitud de registros MARC 21 (referencia)](../herramientas/compmarc/)
-- [ABCD-UCLV — adaptación local (referencia)](../herramientas/abcd-uclv/)
+- [Authoris — control de autoridades semántico (referencia)]
+- [CompMARC — completitud de registros MARC 21 (referencia)]
+- [VIVO-UCLV — ontología institucional (referencia)]
+
+## Comunidades y eventos
+
+- [Semantic Web Journal](https://www.semantic-web-journal.net/)
+- [ISWC — International Semantic Web Conference](http://iswc.semanticweb.org/)
+- [ESWC — Extended Semantic Web Conference](https://eswc.webscience.org/)
+- [Wikidata Con](https://www.wikidata.org/wiki/Wikidata:Wikidata_Con_2023)
+
+## Recursos en español
+
+- [El Profesional de la Información](https://elprofesionaldelainformacion.com/)
+- [Revista Cubana de Información en Ciencias de la Salud](http://www.rcics.sld.cu/)
+- [RedINCLUX — Red de Investigación en Ciencias de la Información de Cuba]

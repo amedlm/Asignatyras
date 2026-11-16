@@ -1,69 +1,73 @@
-# Plantilla — Práctica P2-DUBLINCORE (Análisis Documental I UCLV)
+# U7 — Aplicaciones en Ciencias de la Información
 
-Este es el repositorio plantilla para el assignment **P2-DUBLINCORE** de
-GitHub Classroom (asignatura Análisis Documental I).
+| | |
+|---|---|
+| Horas | 6 |
+| Sesiones | 2 |
+| Prerrequisitos | U1–U6 aprobadas |
+| Práctica | Trabajo final de aplicación (evaluable) |
 
-## Enunciado
+## Objetivos
 
-Crea metadatos **Dublin Core** para **5 recursos digitales** y entrega el
-archivo `recursos.xml` con:
+1. Mapear casos de uso de Web Semántica a problemas de Ciencias de la Información.
+2. Analizar la ontología VIVO-UCLV para gestión de currículums investigativos.
+3. Comprender Authoris para control de autoridades semántico.
+4. Usar Wikidata como fuente para catálogos bibliográficos.
+5. Justificar el valor de Linked Data en bibliotecas, archivos y repositorios.
 
-1. Una página web institucional (p. ej. UCLV).
-2. Un PDF de un artículo científico.
-3. Un dataset (CSV, JSON, Turtle...).
-4. Una imagen fotográfica (con derechos claros).
-5. Un recurso de tu elección (vídeo, audio, software...).
+## Lecturas obligatorias
 
-Requisitos mínimos:
-- XML válido contra el esquema DCMI.
-- 15 elementos Dublin Core Simple presentes por recurso (o justificados).
-- ≥ 5 elementos Qualified (refinamientos) por recurso.
-- Identificador persistente (DOI, Handle, ISBN, URL canónica).
-- Codificación UTF-8.
-- Idioma declarado en `dc:language`.
+- Leiva-Mederos, A. et al. (2021). *Ontología VIVO-UCLV*. Library Hi Tech.
+- Leiva-Mederos, A. et al. (2023). *Authoris: control de autoridades en la Web Semántica*. El Profesional de la Información.
+- Vrandečić, D., Krötzsch, M. (2014). *Wikidata*. CACM.
 
-## Estructura inicial
+## Lecturas complementarias
 
-```
-.
-├── README.md
-├── recursos.xml                   ← AQUÍ ESCRIBES TUS METADATOS DC
-└── .github/
-    └── workflows/
-        └── validar-dc.yml         ← autograding (no editar)
-```
+- VIVO Project: https://vivoweb.org/
+- ISNI: https://isni.org/
+- ORCID: https://orcid.org/
 
-## Cómo trabajar
+## Actividades
 
-1. Elige los 5 recursos digitales y recopila sus datos bibliográficos.
-2. Edita `recursos.xml` con la estructura del ejemplo:
-   [`marcos-catalograficos/dublin-core/ejemplos-dc.xml`](../marcos-catalograficos/dublin-core/ejemplos-dc.xml)
-3. Valida localmente antes de pushar:
-   ```bash
-   xmllint --noout --schema https://www.dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd recursos.xml
-   ```
-4. Commitea con un commit por recurso:
-   ```bash
-   git commit -m "feat(recurso-1): metadatos DC para página web UCLV"
-   ```
-5. Push a `main`. El workflow valida el XML contra el esquema DCMI.
-6. Cuando esté verde, abre el Issue de entrega con la plantilla
-   `entrega-practica.yml`.
+### Sesión 1 — VIVO-UCLV y Authoris
+- Presentación de la ontología VIVO-UCLV: cómo modela la producción
+  científica institucional.
+- Demostración de Authoris: control de autoridades enlazado con Wikidata y
+  VIAF.
+- Discusión: ¿cómo reutilizar estos activos en el TFG del estudiante?
 
-## Rúbrica
+### Sesión 2 — Wikidata como hub bibliográfico
+- Consultas SPARQL sobre Wikidata: obras de autor cubano, premios Cervantes,
+  traducciones.
+- Alineación de autoridades locales con Wikidata vía `owl:sameAs`.
+- Estrategia de enriquecimiento: de MARC 21 (texto) a LD (URI).
 
-| Criterio | Peso | Cómo se verifica |
-|---|---|---|
-| XML válido contra esquema DCMI | 35 % | xmllint OK |
-| 15 elementos presentes por recurso | 25 % | Recuento XPath |
-| ≥ 5 refinamientos Qualified por recurso | 15 % | Recuento XPath |
-| Identificador persistente (DOI/Handle/ISBN/URL) | 10 % | Inspección |
-| Idioma y codificación correctos | 10 % | Inspección |
-| Comentarios explicativos | 5 % | Inspección |
+### Trabajo final
+- Elegir un caso real (Biblioteca UCLV, Repositorio Institucional, archivo
+  personal) y proponer una aplicación semántica.
+- Entrega: memoria `.md` (≥ 1500 palabras) + dataset `.ttl` o consulta `.rq`
+  demostrativa.
+- Defensa oral opcional (10 min).
 
-## Pista: ejemplo
+## Evaluación
 
-Ver [`marcos-catalograficos/dublin-core/ejemplos-dc.xml`](../marcos-catalograficos/dublin-core/ejemplos-dc.xml)
-para un ejemplo completo con los 15 elementos + Qualified + enlaces RDF.
+| Criterio | Peso |
+|---|---|
+| Justificación del caso de uso | 25 % |
+| Reutilización de vocabularios estándar | 20 % |
+| Dataset o consulta demostrativa funcional | 25 % |
+| Calidad de la memoria (citas, estructura) | 20 % |
+| Conexión con VIVO-UCLV / Authoris / Wikidata | 10 % |
 
-¡Mucho éxito!
+## Recursos adicionales
+
+- Currículum del responsable (ORCID): https://orcid.org/0009-0001-5050-5563
+- Lista de enlaces institucionales: [`../recursos/enlaces.md`](../recursos/enlaces.md).
+- Ontologías ejemplo: [`../ontologias-ejemplo/`] (VIVO-UCLV, Authoris).
+
+## Glosario clave
+
+- **VIVO**: ontología para representar investigadores, publicaciones, premios.
+- **Authoris**: herramienta del responsable para control de autoridades semántico.
+- **CRIS**: Current Research Information System.
+- **ISNI/ORCID/VIAF**: identificadores persistentes para personas y obras.

@@ -1,41 +1,42 @@
-# Competencias — Análisis Documental I (UCLV)
+# Competencias — Web Semántica (UCLV)
 
 Mapeo entre competencias del Programa de Formación Continua, resultados de
-aprendizaje y unidades temáticas.
+aprendizaje y unidades temáticas. Las competencias genéricas y específicas
+siguen la nomenclatura oficial UCLV / ANECA.
 
 ## 1. Competencias genéricas (transversales)
 
 | Código | Competencia | Nivel | Unidades que la trabajan |
 |---|---|---|---|
-| CG1 | Capacidad de análisis y síntesis | Avanzado | U1, U2, U4 |
-| CG2 | Resolución de problemas en entornos nuevos | Intermedio | U3, U6 |
-| CG3 | Comunicación científica escrita | Avanzado | U2, U4 |
-| CG4 | Trabajo en equipo y colaborativo | Intermedio | U3 (P3-INDIZACION en pareja) |
-| CG5 | Uso de Tecnologías de la Información | Avanzado | U1 (MARC21), U5 (DC) |
+| CG1 | Capacidad de análisis y síntesis | Avanzado | U1, U3, U6 |
+| CG2 | Resolución de problemas en entornos nuevos | Avanzado | U2, U5, U7 |
+| CG3 | Comunicación científica escrita | Intermedio | U3, U7 |
+| CG4 | Trabajo en equipo y colaborativo | Intermedio | U2 (P2-OWL) |
+| CG5 | Uso de Tecnologías de la Información | Avanzado | Todas |
 | CG6 | Aprendizaje autónomo | Avanzado | Todas (aula invertida) |
-| CG7 | Compromiso ético y atribución | Intermedio | U6 (autoridades), U7 (CC) |
+| CG7 | Compromiso ético y atribución | Intermedio | U2, U6 (licencias CC) |
 
 ## 2. Competencias específicas (disciplinares)
 
 | Código | Competencia | Nivel | Resultado verificable |
 |---|---|---|---|
-| CE1 | Catalogación según ISBD/UNIMARC/MARC 21 | Avanzado | Registro MARC 21 con campos 1XX, 245, 260, 650 |
-| CE2 | Indización con tesauros y listas de encabezamientos | Avanzado | 10 documentos indizados con coherencia |
-| CE3 | Resumen documental (informativo e indicativo) | Intermedio | 2 resúmenes de 100 y 50 palabras |
-| CE4 | Metadatos Dublin Core para recursos digitales | Intermedio | 15 elementos DC completos |
-| CE5 | Control de autoridades | Intermedio | Registro 1XX con cruce a VIAF |
+| CE1 | Modelado conceptual de dominios de información | Avanzado | Ontología OWL cargable en Protégé |
+| CE2 | Serialización y publicación de datos estructurados | Avanzado | Dataset Turtle válido de ≥50 tripletas |
+| CE3 | Consulta y recuperación semántica | Avanzado | 5 consultas SPARQL correctas |
+| CE4 | Diseño de vocabularios controlados | Intermedio | ConceptScheme SKOS con ≥20 conceptos |
+| CE5 | Aplicación de LD a Ciencias de la Información | Intermedio | Caso práctico VIVO-UCLV o Authoris |
 
 ## 3. Resultados de aprendizaje (RA) por unidad
 
 | Unidad | RA | Criterio de evaluación | Instrumento |
 |---|---|---|---|
-| U1 | Cataloga una monografía en MARC 21 con los campos obligatorios | PyMARC parse OK + CompMARC ≥ 70 % | P1-MARC21 |
-| U2 | Identifica conceptos clave de un texto científico | ≥ 10 conceptos por texto | H5P U2 |
-| U3 | Indiza 10 artículos con tesauro de la Biblioteca UCLV | Comparación gold standard ≥ 75 % | P3-INDIZACION |
-| U4 | Redacta un resumen informativo y otro indicativo | Cumple pautas ISO 214 | H5P U4 |
-| U5 | Crea metadatos Dublin Core para 5 recursos digitales | Validación jsonschema OK | P2-DUBLINCORE |
-| U6 | Establece autoridades y enlaza con VIAF | ≥ 5 autoridades enlazadas | H5P U6 |
-| U7 | Diseña mini-tesauro SKOS con 20 conceptos | rdflib parse OK | Trabajo final |
+| U1 | Distingue Web 1.0/2.0/3.0 y explica las capas del W3C | Test H5P ≥80 % | Cuestionario H5P U1 |
+| U2 | Serializa tripletas RDF en Turtle sin errores sintácticos | robot validate OK | P1-RDF |
+| U3 | Modela ontología OWL consistente con razonador HermiT | reason OK sin inconsistencias | P2-OWL |
+| U4 | Diseña ConceptScheme SKOS con relaciones jerárquicas y asociativas | rdflib parse OK, ≥20 conceptos | H5P U4 |
+| U5 | Escribe consultas SPARQL correctas (SELECT, CONSTRUCT, OPTIONAL) | 5/5 consultas OK contra Fuseki | P3-SPARQL |
+| U6 | Publica un dataset como Linked Data 5 estrellas | Dereferenciación HTTP 303 | Publicación dataset |
+| U7 | Aplica Web Semántica a un problema real de CInfo | Memoria + demo | Trabajo final |
 
 ## 4. Alineación con criterios ANECA
 
@@ -43,5 +44,5 @@ aprendizaje y unidades temáticas.
 |---|---|
 | Calidad | Materiales versionados, plantillas, rúbricas |
 | Innovación | Aula invertida + autograding GitHub Classroom |
-| Internacionalización | LIS (LCSH), RDA, alineación con VIAF/Wikidata |
-| Competitividad | Habilidades demandadas en sector bibliotecario cubano |
+| Internacionalización | Endpoints Wikidata/DBpedia, reuso CC BY-SA 4.0 |
+| Competitividad | Habilidades demandadas en mercado LD/Semantic Web |
