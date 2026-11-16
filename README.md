@@ -1,68 +1,78 @@
-# U6 — Control de autoridades
+# U1 — Análisis formal (ISBD / UNIMARC / MARC 21)
 
 | | |
 |---|---|
-| Horas | 8 |
-| Sesiones | 2 |
-| Prerrequisitos | U1 + U3 aprobadas |
-| Práctica | H5P U6 + ejercicio de enlaces a VIAF |
+| Horas | 12 |
+| Sesiones | 4 |
+| Prerrequisitos | Ninguno (asignatura base) |
+| Práctica evaluable | **P1-MARC21** (individual, autograding PyMARC + CompMARC) |
 
 ## Objetivos
 
-1. Comprender el concepto de control de autoridades en catalogación.
-2. Construir registros MARC 21 de autoridades (campos 1XX, 4XX, 5XX).
-3. Establecer referencias («see» / «see also») entre formas de nombre.
-4. Enlazar autoridades locales con VIAF y Wikidata.
-5. Conectar el control de autoridades con la Web Semántica (Authoris).
+1. Aplicar la normativa ISBD a la descripción formal de monografías.
+2. Comprender la correspondencia ISBD → UNIMARC → MARC 21.
+3. Identificar los campos obligatorios de un registro MARC 21 (Leader, 001, 008, 1XX, 245, 260, 650).
+4. Construir un registro MARC 21 completo para una monografía real.
+5. Verificar la calidad del registro con CompMARC.
 
 ## Lecturas obligatorias
 
-- Maxwell, R. L. (2008). *Maxwell's Guide to Authority Work*. ALA Editions.
-- Library of Congress. *MARC 21 Format for Authority Data*. https://www.loc.gov/marc/authority/
-- Leiva-Mederos, A. et al. (2023). *Authoris: control de autoridades en la Web Semántica*. El Profesional de la Información.
+- IFLA (2011). *International Standard Bibliographic Description (ISBD)*. https://www.ifla.org/isbd
+- Library of Congress. *MARC 21 Format for Bibliographic Data*. https://www.loc.gov/marc/bibliographic/
+- Maxwell, R. L. (2004). *Maxwell's Handbook for MARC 21*. ALA Editions.
 
 ## Lecturas complementarias
 
-- VIAF: https://viaf.org/
-- IFLA (2009). *Functional Requirements for Authority Data (FRAD)*.
-- RDA Appendix N: **Access point**.
+- Marcos de Cabezón, B. (2018). *Catalogación*. Trea.
+- Library of Congress. *MARC 21 Concise Format*.
 
 ## Actividades
 
 ### Antes de la sesión 1
-- Video H5P «Control de autoridades y referencias» (10 min).
-- Cuestionario H5P U6 (5 preguntas).
+- Video H5P «Las 8 áreas ISBD» (10 min).
+- Cuestionario H5P U1 parte 1 (8 preguntas).
 
-### Sesión 1 — MARC 21 autoridades
-- `100` nombre personal (autoridad), `110` corporativo, `111` reunión.
-- `400` see-from tracing (variante), `500` see-also-from (relacionado).
-- `370` lugar asociado, `372` campo de actividad, `375` género.
-- Enlace a VIAF: campo `024` con identificador VIAF.
+### Sesión 1 — ISBD
+- Las 8 áreas: título y mención de responsabilidad, edición, publicación,
+  descripción física, serie, notas, ISBN, adquisiciones.
+- Puntuación ISBD (`.`, `;`, `:`, `/`, `,`).
 
-### Sesión 2 — Enlaces externos
-- Cómo consultar VIAF para cada autor local.
-- Alineación con Wikidata vía `owl:sameAs` (Web Semántica, ver Authoris).
-- Estrategia para migrar autoridades en papel a identificadores persistentes.
+### Sesión 2 — UNIMARC vs MARC 21
+- Historia y diferencia entre formatos.
+- Estructura de un registro: Leader, directorio, campos de control (00X),
+  campos de datos (1XX-9XX), indicadores, subcampos (`$a`, `$b`).
 
-### Práctica (no evaluable en Classroom)
-- Para 5 autores del catálogo local, encontrar entrada VIAF y construir
-  registro MARC 21 de autoridad con `024` y `370`.
-- Entrega: PR al repo `marcos-catalograficos/marc21/plantillas/autoridades.mrc`.
+### Sesión 3 — MARC 21 esenciales
+- `001` control number, `008` fixed-length data.
+- `100` autor principal, `245` título, `260` publicación.
+- `650` materia, `020` ISBN, `090` signatura local.
 
-## Evaluación
+### Sesión 4 — Práctica P1-MARC21
+- Enunciado: catalogar 3 monografías en MARC 21.
+- Entrega vía GitHub Classroom: archivos `.mrc` (binario) y `.xml` (MARCXML).
+- Autograding: `pymarc` valida sintaxis y `compmarc.py` calcula score.
 
-- Cuestionario H5P U6: 100 % de la nota.
+## Evaluación — Práctica P1-MARC21
+
+| Criterio | Peso |
+|---|---|
+| Sintaxis MARC 21 válida (PyMARC parse OK) | 30 % |
+| Campos obligatorios presentes (001, 100, 245, 260, 650) | 25 % |
+| Score CompMARC ≥ 70 % | 25 % |
+| Subcampos correctos en cada campo | 10 % |
+| Indicadores correctos (1XX, 245) | 10 % |
 
 ## Recursos adicionales
 
-- Authoris (herramienta del responsable): referencia en [`../../herramientas/`] y [`https://orcid.org/0009-0001-5050-5563`]
-- VIAF: https://viaf.org/
-- LC Authorities: https://authorities.loc.gov/
+- Registros ejemplo en [`../../marcos-catalograficos/marc21/ejemplos/`](../../marcos-catalograficos/marc21/ejemplos/)
+- CompMARC: [`../../herramientas/compmarc/`](../../herramientas/compmarc/)
+- ABCD-UCLV: [`../../herramientas/abcd-uclv/`](../../herramientas/abcd-uclv/)
+- Library of Congress MARC: https://www.loc.gov/marc/
 
 ## Glosario clave
 
-- **Autoridad**: forma autorizada de un nombre, título o tema.
-- **See-from**: referencia desde una variante a la forma autorizada.
-- **See-also-from**: referencia entre dos autoridades relacionadas.
-- **VIAF**: Virtual International Authority File, agregador internacional.
-- **FRAD**: Functional Requirements for Authority Data (IFLA).
+- **ISBD**: International Standard Bibliographic Description.
+- **MARC 21**: Machine-Readable Cataloging, formato del LC.
+- **Leader**: primeros 24 caracteres del registro MARC (control).
+- **Campo de control**: campo 00X sin indicadores ni subcampos.
+- **Campo de datos**: campo 1XX-9XX con indicadores (2) y subcampos (`$a`).
